@@ -1,0 +1,12 @@
+D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\bin\Debug\QLThueXeOto.exe.config
+D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\bin\Debug\QLThueXeOto.exe
+D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\bin\Debug\QLThueXeOto.pdb
+D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLThueXeOto.csproj.AssemblyReference.cache
+D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLThueXeOto.Form1.resources
+D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLThueXeOto.Properties.Resources.resources
+D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLThueXeOto.csproj.GenerateResource.cache
+D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLThueXeOto.csproj.CoreCompileInputs.cache
+D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLThueXeOto.exe
+D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLThueXeOto.pdb
+D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\bin\Debug\Guna.UI2.dll
+D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLThueXeOto.csproj.CopyComplete
