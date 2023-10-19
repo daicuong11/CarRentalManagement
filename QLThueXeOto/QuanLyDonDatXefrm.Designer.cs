@@ -1,6 +1,6 @@
 ﻿namespace QLThueXeOto
 {
-    partial class Homefrm
+    partial class QuanLyDonDatXefrm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.scLayer = new System.Windows.Forms.SplitContainer();
             this.btnQLKhachHang = new Guna.UI2.WinForms.Guna2Button();
             this.btnQLLichTrinh = new Guna.UI2.WinForms.Guna2Button();
@@ -66,13 +65,6 @@
             this.menuTripUserInfo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 27);
-            this.toolStripTextBox1.Text = "Đăng xuất";
-            // 
             // scLayer
             // 
             this.scLayer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -95,9 +87,9 @@
             // 
             this.scLayer.Panel2.Controls.Add(this.body);
             this.scLayer.Panel2.Controls.Add(this.header);
-            this.scLayer.Size = new System.Drawing.Size(895, 650);
-            this.scLayer.SplitterDistance = 277;
-            this.scLayer.TabIndex = 4;
+            this.scLayer.Size = new System.Drawing.Size(903, 658);
+            this.scLayer.SplitterDistance = 280;
+            this.scLayer.TabIndex = 3;
             // 
             // btnQLKhachHang
             // 
@@ -119,11 +111,10 @@
             this.btnQLKhachHang.Location = new System.Drawing.Point(0, 369);
             this.btnQLKhachHang.Name = "btnQLKhachHang";
             this.btnQLKhachHang.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnQLKhachHang.Size = new System.Drawing.Size(271, 64);
+            this.btnQLKhachHang.Size = new System.Drawing.Size(274, 64);
             this.btnQLKhachHang.TabIndex = 8;
             this.btnQLKhachHang.Text = "QUẢN LÝ KHÁCH HÀNG";
             this.btnQLKhachHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnQLKhachHang.Click += new System.EventHandler(this.btnQLKhachHang_Click_1);
             // 
             // btnQLLichTrinh
             // 
@@ -145,11 +136,10 @@
             this.btnQLLichTrinh.Location = new System.Drawing.Point(0, 299);
             this.btnQLLichTrinh.Name = "btnQLLichTrinh";
             this.btnQLLichTrinh.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnQLLichTrinh.Size = new System.Drawing.Size(271, 64);
+            this.btnQLLichTrinh.Size = new System.Drawing.Size(274, 64);
             this.btnQLLichTrinh.TabIndex = 7;
             this.btnQLLichTrinh.Text = "QUẢN LÝ LỊCH TRÌNH";
             this.btnQLLichTrinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnQLLichTrinh.Click += new System.EventHandler(this.btnQLLichTrinh_Click_1);
             // 
             // guna2Panel1
             // 
@@ -158,7 +148,7 @@
             this.guna2Panel1.Controls.Add(this.scItemThongKe);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 439);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(274, 211);
+            this.guna2Panel1.Size = new System.Drawing.Size(277, 211);
             this.guna2Panel1.TabIndex = 6;
             // 
             // scItemThongKe
@@ -178,7 +168,7 @@
             this.scItemThongKe.Panel2.Controls.Add(this.guna2Button5);
             this.scItemThongKe.Panel2.Controls.Add(this.guna2Button4);
             this.scItemThongKe.Panel2MinSize = 0;
-            this.scItemThongKe.Size = new System.Drawing.Size(271, 205);
+            this.scItemThongKe.Size = new System.Drawing.Size(274, 205);
             this.scItemThongKe.SplitterDistance = 62;
             this.scItemThongKe.SplitterWidth = 8;
             this.scItemThongKe.TabIndex = 7;
@@ -204,11 +194,11 @@
             this.btnThongKe.Location = new System.Drawing.Point(-1, 3);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnThongKe.Size = new System.Drawing.Size(275, 64);
+            this.btnThongKe.Size = new System.Drawing.Size(278, 64);
             this.btnThongKe.TabIndex = 5;
             this.btnThongKe.Text = "THỐNG KÊ             VV";
             this.btnThongKe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click_1);
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // guna2Button5
             // 
@@ -230,7 +220,7 @@
             this.guna2Button5.Location = new System.Drawing.Point(0, 72);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.guna2Button5.Size = new System.Drawing.Size(271, 64);
+            this.guna2Button5.Size = new System.Drawing.Size(274, 64);
             this.guna2Button5.TabIndex = 7;
             this.guna2Button5.Text = "KHÁCH HÀNG";
             this.guna2Button5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -255,7 +245,7 @@
             this.guna2Button4.Location = new System.Drawing.Point(0, 3);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.guna2Button4.Size = new System.Drawing.Size(273, 64);
+            this.guna2Button4.Size = new System.Drawing.Size(276, 64);
             this.guna2Button4.TabIndex = 6;
             this.guna2Button4.Text = "DOANH THU";
             this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -269,9 +259,9 @@
             this.btnQLDonDatXe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnQLDonDatXe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnQLDonDatXe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnQLDonDatXe.FillColor = System.Drawing.Color.Transparent;
+            this.btnQLDonDatXe.FillColor = System.Drawing.Color.DimGray;
             this.btnQLDonDatXe.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.btnQLDonDatXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(163)))), ((int)(((byte)(183)))));
+            this.btnQLDonDatXe.ForeColor = System.Drawing.Color.White;
             this.btnQLDonDatXe.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(39)))));
             this.btnQLDonDatXe.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnQLDonDatXe.Image = global::QLThueXeOto.Properties.Resources.boxblack;
@@ -280,11 +270,10 @@
             this.btnQLDonDatXe.Location = new System.Drawing.Point(0, 229);
             this.btnQLDonDatXe.Name = "btnQLDonDatXe";
             this.btnQLDonDatXe.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnQLDonDatXe.Size = new System.Drawing.Size(271, 64);
+            this.btnQLDonDatXe.Size = new System.Drawing.Size(274, 64);
             this.btnQLDonDatXe.TabIndex = 4;
             this.btnQLDonDatXe.Text = "QUẢN LÝ ĐƠN ĐẶT XE";
             this.btnQLDonDatXe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnQLDonDatXe.Click += new System.EventHandler(this.btnQLDonDatXe_Click_1);
             // 
             // btnQLOto
             // 
@@ -306,11 +295,10 @@
             this.btnQLOto.Location = new System.Drawing.Point(0, 159);
             this.btnQLOto.Name = "btnQLOto";
             this.btnQLOto.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnQLOto.Size = new System.Drawing.Size(271, 64);
+            this.btnQLOto.Size = new System.Drawing.Size(274, 64);
             this.btnQLOto.TabIndex = 3;
             this.btnQLOto.Text = "QUẢN LÝ OTO";
             this.btnQLOto.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnQLOto.Click += new System.EventHandler(this.btnQLOto_Click_1);
             // 
             // panel1
             // 
@@ -320,7 +308,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(277, 62);
+            this.panel1.Size = new System.Drawing.Size(280, 62);
             this.panel1.TabIndex = 2;
             // 
             // lbTitle
@@ -351,12 +339,12 @@
             this.btnHidenBar.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHidenBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(108)))), ((int)(((byte)(154)))));
             this.btnHidenBar.HoverState.ForeColor = System.Drawing.Color.Blue;
-            this.btnHidenBar.Location = new System.Drawing.Point(188, 3);
+            this.btnHidenBar.Location = new System.Drawing.Point(191, 3);
             this.btnHidenBar.Name = "btnHidenBar";
             this.btnHidenBar.Size = new System.Drawing.Size(86, 56);
             this.btnHidenBar.TabIndex = 0;
             this.btnHidenBar.Text = "<<";
-            this.btnHidenBar.Click += new System.EventHandler(this.btnHidenBar_Click_1);
+            this.btnHidenBar.Click += new System.EventHandler(this.btnHidenBar_Click);
             // 
             // btnChoThue
             // 
@@ -378,11 +366,10 @@
             this.btnChoThue.Location = new System.Drawing.Point(0, 89);
             this.btnChoThue.Name = "btnChoThue";
             this.btnChoThue.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnChoThue.Size = new System.Drawing.Size(271, 64);
+            this.btnChoThue.Size = new System.Drawing.Size(274, 64);
             this.btnChoThue.TabIndex = 1;
             this.btnChoThue.Text = "HỢP ĐỒNG CHO THUÊ";
             this.btnChoThue.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnChoThue.Click += new System.EventHandler(this.btnChoThue_Click_1);
             // 
             // body
             // 
@@ -392,7 +379,7 @@
             this.body.Dock = System.Windows.Forms.DockStyle.Fill;
             this.body.Location = new System.Drawing.Point(0, 62);
             this.body.Name = "body";
-            this.body.Size = new System.Drawing.Size(614, 588);
+            this.body.Size = new System.Drawing.Size(619, 596);
             this.body.TabIndex = 1;
             // 
             // pnContentLeft
@@ -405,7 +392,7 @@
             this.pnContentLeft.Location = new System.Drawing.Point(23, 134);
             this.pnContentLeft.Name = "pnContentLeft";
             this.pnContentLeft.ShadowColor = System.Drawing.Color.Gainsboro;
-            this.pnContentLeft.Size = new System.Drawing.Size(566, 430);
+            this.pnContentLeft.Size = new System.Drawing.Size(571, 438);
             this.pnContentLeft.TabIndex = 2;
             // 
             // pnTitleContent
@@ -417,7 +404,7 @@
             this.pnTitleContent.Location = new System.Drawing.Point(23, 18);
             this.pnTitleContent.Name = "pnTitleContent";
             this.pnTitleContent.ShadowColor = System.Drawing.Color.Gainsboro;
-            this.pnTitleContent.Size = new System.Drawing.Size(566, 97);
+            this.pnTitleContent.Size = new System.Drawing.Size(571, 97);
             this.pnTitleContent.TabIndex = 1;
             // 
             // header
@@ -427,7 +414,7 @@
             this.header.Dock = System.Windows.Forms.DockStyle.Top;
             this.header.Location = new System.Drawing.Point(0, 0);
             this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(614, 62);
+            this.header.Size = new System.Drawing.Size(619, 62);
             this.header.TabIndex = 0;
             // 
             // menuTripUserInfo
@@ -438,7 +425,7 @@
             this.menuTripUserInfo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lbUserName,
             this.aToolStripMenuItem});
-            this.menuTripUserInfo.Location = new System.Drawing.Point(458, 16);
+            this.menuTripUserInfo.Location = new System.Drawing.Point(463, 16);
             this.menuTripUserInfo.Name = "menuTripUserInfo";
             this.menuTripUserInfo.Size = new System.Drawing.Size(147, 28);
             this.menuTripUserInfo.TabIndex = 0;
@@ -466,18 +453,18 @@
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
             this.aToolStripMenuItem.Size = new System.Drawing.Size(34, 24);
             // 
-            // Homefrm
+            // QuanLyDonDatXefrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(895, 650);
+            this.ClientSize = new System.Drawing.Size(903, 658);
             this.Controls.Add(this.scLayer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Name = "Homefrm";
-            this.Text = "Quản Lý Thuê Xe Oto";
+            this.Name = "QuanLyDonDatXefrm";
+            this.Text = "QuanLyDonDatXe";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Homefrm_FormClosing);
-            this.Load += new System.EventHandler(this.Homefrm_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuanLyDonDatXe_FormClosing);
+            this.Load += new System.EventHandler(this.QuanLyDonDatXe_Load);
             this.scLayer.Panel1.ResumeLayout(false);
             this.scLayer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.scLayer)).EndInit();
@@ -499,7 +486,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+
         private System.Windows.Forms.SplitContainer scLayer;
         private Guna.UI2.WinForms.Guna2Button btnQLKhachHang;
         private Guna.UI2.WinForms.Guna2Button btnQLLichTrinh;

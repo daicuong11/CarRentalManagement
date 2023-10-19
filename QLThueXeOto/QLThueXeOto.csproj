@@ -54,9 +54,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\DangNhapBLL.cs" />
+    <Compile Include="BLL\HomeBLL.cs" />
+    <Compile Include="BLL\HopDongThueXeBLL.cs" />
     <Compile Include="DAO\AuthDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\LoaiXeDAO.cs" />
     <Compile Include="DAO\NguoiDungDAO.cs" />
+    <Compile Include="DTO\LoaiXe.cs" />
     <Compile Include="DTO\NguoiDung.cs" />
     <Compile Include="DangNhapfrm.cs">
       <SubType>Form</SubType>
@@ -70,10 +74,46 @@
     <Compile Include="Homefrm.Designer.cs">
       <DependentUpon>Homefrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HopDongThueXefrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HopDongThueXefrm.Designer.cs">
+      <DependentUpon>HopDongThueXefrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyDonDatXefrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyDonDatXefrm.Designer.cs">
+      <DependentUpon>QuanLyDonDatXefrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyKhachHangfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyKhachHangfrm.Designer.cs">
+      <DependentUpon>QuanLyKhachHangfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyLichTrinhfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyLichTrinhfrm.Designer.cs">
+      <DependentUpon>QuanLyLichTrinhfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyOtofrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyOtofrm.Designer.cs">
+      <DependentUpon>QuanLyOtofrm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DangNhapfrm.resx">
       <DependentUpon>DangNhapfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homefrm.resx">
+      <DependentUpon>Homefrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HopDongThueXefrm.resx">
+      <DependentUpon>HopDongThueXefrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -83,7 +123,20 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QuanLyDonDatXefrm.resx">
+      <DependentUpon>QuanLyDonDatXefrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyKhachHangfrm.resx">
+      <DependentUpon>QuanLyKhachHangfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyLichTrinhfrm.resx">
+      <DependentUpon>QuanLyLichTrinhfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyOtofrm.resx">
+      <DependentUpon>QuanLyOtofrm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -100,6 +153,39 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sliders.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vitri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boxblack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cicler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car_Mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car_Mini1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

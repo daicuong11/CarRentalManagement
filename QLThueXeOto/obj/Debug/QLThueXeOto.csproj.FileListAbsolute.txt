@@ -10,3 +10,9 @@ D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLT
 D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\bin\Debug\Guna.UI2.dll
 D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLThueXeOto.csproj.CopyComplete
 D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLThueXeOto.DangNhapfrm.resources
+D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLThueXeOto.Homefrm.resources
+D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLThueXeOto.HopDongThueXefrm.resources
+D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLThueXeOto.QuanLyOtofrm.resources
+D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLThueXeOto.QuanLyDonDatXefrm.resources
+D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLThueXeOto.QuanLyKhachHangfrm.resources
+D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLThueXeOto.QuanLyLichTrinhfrm.resources

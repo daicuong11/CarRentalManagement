@@ -1,4 +1,6 @@
-﻿using QLThueXeOto.DAO;
+﻿using QLThueXeOto.BLL;
+using QLThueXeOto.DAO;
+using QLThueXeOto.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,20 +13,30 @@ using System.Windows.Forms;
 
 namespace QLThueXeOto
 {
-    public partial class Homefrm : Form
+    public partial class HopDongThueXefrm : Form
     {
         private int minWithSightBar = 54;
         private int maxWithSightBar = 300;
         private int heightItem = 64;
-        public Homefrm()
+        public HopDongThueXefrm()
         {
             InitializeComponent();
+        }
+
+        private void HopDongThueXefrm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Homefrm frm = (Homefrm)Application.OpenForms["Homefrm"];
+            if (frm != null)
+            {
+                frm.Show();
+            }
         }
 
         private void Homefrm_SizeChanged(object sender, EventArgs e)
         {
             scLayer.SplitterDistance = minWithSightBar;
             btnChoThue.Text = "";
+
         }
 
         public void changeSightBar()
@@ -57,59 +69,43 @@ namespace QLThueXeOto
             }
         }
 
-        private void Homefrm_Load(object sender, EventArgs e)
+        private void HopDongThueXefrm_Load(object sender, EventArgs e)
         {
             scLayer.SplitterDistance = maxWithSightBar;
             this.SizeChanged += Homefrm_SizeChanged;
             lbUserName.Text = "Hi, " + AuthDAO.Instance.User.TenNguoiDung;
+            loadLoaiXe();
         }
 
-        private void Homefrm_FormClosing(object sender, FormClosingEventArgs e)
+        private void loadLoaiXe()
         {
-            Application.Exit();
+            List<LoaiXe> loaiXes = HopDongThueXeBLL.Instance.loaiXes();
+            foreach(LoaiXe x in loaiXes)
+            {
+                Button btn = new Button();
+                btn.Width = HopDongThueXeBLL.Instance.WidthBtn;
+                btn.Height = HopDongThueXeBLL.Instance.HeightBtn;
+                btn.Text = x.TenLoaiXe;
+                btn.Image = Properties.Resources.Car2;
+                btn.Padding = new Padding(5, 5, 5, 5);
+                btn.Margin = new Padding(10, 10, 10, 10);
+                btn.ImageAlign = ContentAlignment.TopCenter;
+                btn.TextImageRelation = TextImageRelation.ImageAboveText;
+                btn.ForeColor = Color.DimGray; 
+                btn.Font = new Font("Arial", 12, FontStyle.Bold); 
+                btn.UseVisualStyleBackColor = false;
+                btn.Cursor = Cursors.Hand;
+                flTable.Controls.Add(btn);
+            }
         }
 
-        private void btnChoThue_Click_1(object sender, EventArgs e)
-        {
-            HopDongThueXefrm frm = new HopDongThueXefrm();
-            this.Hide();
-            frm.Show();
-        }
-
-        private void btnQLOto_Click_1(object sender, EventArgs e)
-        {
-            QuanLyOtofrm frm = new QuanLyOtofrm();
-            this.Hide();
-            frm.Show();
-        }
-
-        private void btnQLDonDatXe_Click_1(object sender, EventArgs e)
-        {
-            QuanLyDonDatXefrm frm = new QuanLyDonDatXefrm();
-            this.Hide();
-            frm.Show();
-        }
-
-        private void btnQLLichTrinh_Click_1(object sender, EventArgs e)
-        {
-            QuanLyLichTrinhfrm frm = new QuanLyLichTrinhfrm();
-            this.Hide();
-            frm.Show();
-        }
-
-        private void btnQLKhachHang_Click_1(object sender, EventArgs e)
-        {
-            QuanLyKhachHangfrm frm = new QuanLyKhachHangfrm();
-            this.Hide();
-            frm.Show();
-        }
-
-        private void btnHidenBar_Click_1(object sender, EventArgs e)
+        private void btnHidenBar_Click(object sender, EventArgs e)
         {
             changeSightBar();
+
         }
 
-        private void btnThongKe_Click_1(object sender, EventArgs e)
+        private void btnThongKe_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(btnThongKe.Text))
             {
