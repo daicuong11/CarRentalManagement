@@ -23,7 +23,6 @@ namespace QLThueXeOto.DTO
             this.loaiXeId = (int)row["loaiXeId"];
             this.tenLoaiXe = row["tenLoaiXe"].ToString();
             this.soChoNgoi = (int)row["soChoNgoi"];
-            this.loaiNhienLieu = row["loaiNhienLieu"].ToString();
         }
 
         public int LoaiXeId { get => loaiXeId; set => loaiXeId = value; }

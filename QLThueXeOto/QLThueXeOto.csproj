@@ -40,6 +40,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -54,12 +55,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\DangNhapBLL.cs" />
+    <Compile Include="BLL\DonDatXeBLL.cs" />
     <Compile Include="BLL\HomeBLL.cs" />
     <Compile Include="BLL\HopDongThueXeBLL.cs" />
+    <Compile Include="BLL\ThueXeBLL.cs" />
     <Compile Include="DAO\AuthDAO.cs" />
+    <Compile Include="DAO\CTDDDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\DonDatXeDAO.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\LoaiXeDAO.cs" />
     <Compile Include="DAO\NguoiDungDAO.cs" />
+    <Compile Include="DAO\XeDAO.cs" />
+    <Compile Include="DonDatXefrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DonDatXefrm.Designer.cs">
+      <DependentUpon>DonDatXefrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\CTDD.cs" />
+    <Compile Include="DTO\DonDatXe.cs" />
+    <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DTO\LoaiXe.cs" />
     <Compile Include="DTO\NguoiDung.cs" />
     <Compile Include="DangNhapfrm.cs">
@@ -68,6 +84,7 @@
     <Compile Include="DangNhapfrm.Designer.cs">
       <DependentUpon>DangNhapfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DTO\Xe.cs" />
     <Compile Include="Homefrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,8 +123,17 @@
     <Compile Include="QuanLyOtofrm.Designer.cs">
       <DependentUpon>QuanLyOtofrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThueXefrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThueXefrm.Designer.cs">
+      <DependentUpon>ThueXefrm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DangNhapfrm.resx">
       <DependentUpon>DangNhapfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonDatXefrm.resx">
+      <DependentUpon>DonDatXefrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Homefrm.resx">
       <DependentUpon>Homefrm.cs</DependentUpon>
@@ -136,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyOtofrm.resx">
       <DependentUpon>QuanLyOtofrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThueXefrm.resx">
+      <DependentUpon>ThueXefrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

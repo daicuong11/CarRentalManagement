@@ -22,5 +22,22 @@ namespace QLThueXeOto.DAO
         {
             return DataProvider.Instance.ExecuteQuery("select * from loaixe");
         }
+
+        public DataTable getLoaiXeBySoChoNgoi(int soChoNgoi)
+        {
+            return DataProvider.Instance.ExecuteQuery("select * from loaixe where soChoNgoi = @soChoNgoi ", new object[] { soChoNgoi });
+        }
+
+        public DataTable getLoaiXeByKieuDang(string kieuDang)
+        {
+            string query = "select * from loaixe where tenLoaiXe like N'%" + kieuDang + "%'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public DataTable getLoaiXeByKieuDangAndSoChoNgoi(string kieuDang, int soChoNgoi)
+        {
+            string query = "select * from loaixe where tenLoaiXe like N'%" + kieuDang + "%' and soChoNgoi = @soChoNgoi";
+            return DataProvider.Instance.ExecuteQuery(query, new object[] {soChoNgoi});
+        }
     }
 }

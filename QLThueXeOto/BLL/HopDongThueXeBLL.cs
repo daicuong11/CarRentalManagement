@@ -35,5 +35,41 @@ namespace QLThueXeOto.BLL
             }
             return lst;
         }
+
+        public List<LoaiXe> ListLoaiXeBySoChoNgoi( int soChoNgoi)
+        {
+            List<LoaiXe> lst = new List<LoaiXe>();
+            DataTable table = LoaiXeDAO.Instance.getLoaiXeBySoChoNgoi(soChoNgoi);
+
+            foreach (DataRow dr in table.Rows)
+            {
+                lst.Add(new LoaiXe(dr));
+            }
+            return lst;
+        }
+
+        public List<LoaiXe> ListLoaiXeByKieuDang(string kieuDang)
+        {
+            List<LoaiXe> lst = new List<LoaiXe>();
+            DataTable table = LoaiXeDAO.Instance.getLoaiXeByKieuDang(kieuDang);
+
+            foreach (DataRow dr in table.Rows)
+            {
+                lst.Add(new LoaiXe(dr));
+            }
+            return lst;
+        }
+
+        public List<LoaiXe> ListLoaiXeByKieuDangAndSoChoNgoi(string kieuDang, int soChoNgoi)
+        {
+            List<LoaiXe> lst = new List<LoaiXe>();
+            DataTable table = LoaiXeDAO.Instance.getLoaiXeByKieuDangAndSoChoNgoi(kieuDang, soChoNgoi);
+
+            foreach (DataRow dr in table.Rows)
+            {
+                lst.Add(new LoaiXe(dr));
+            }
+            return lst;
+        }
     }
 }

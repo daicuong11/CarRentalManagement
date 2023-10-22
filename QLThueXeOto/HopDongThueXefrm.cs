@@ -18,6 +18,9 @@ namespace QLThueXeOto
         private int minWithSightBar = 54;
         private int maxWithSightBar = 300;
         private int heightItem = 64;
+        //
+        private int soChoNgoiDuocChon = 0;
+        private string kieuDangDuocChon = null;
         public HopDongThueXefrm()
         {
             InitializeComponent();
@@ -69,17 +72,37 @@ namespace QLThueXeOto
             }
         }
 
+        private void Refresh_Table_When_Choosed()
+        {
+            if(String.IsNullOrEmpty(this.kieuDangDuocChon) && this.soChoNgoiDuocChon == 0)
+            {
+                this.loadLoaiXe(HopDongThueXeBLL.Instance.loaiXes());
+            }
+            else if(String.IsNullOrEmpty(this.kieuDangDuocChon) && this.soChoNgoiDuocChon != 0)
+            {
+                this.loadLoaiXe(HopDongThueXeBLL.Instance.ListLoaiXeBySoChoNgoi(this.soChoNgoiDuocChon));
+            }
+            else if(!(String.IsNullOrEmpty(this.kieuDangDuocChon)) && this.soChoNgoiDuocChon == 0)
+            {
+                this.loadLoaiXe(HopDongThueXeBLL.Instance.ListLoaiXeByKieuDang(this.kieuDangDuocChon));
+            }
+            else
+            {
+                this.loadLoaiXe(HopDongThueXeBLL.Instance.ListLoaiXeByKieuDangAndSoChoNgoi(this.kieuDangDuocChon, this.soChoNgoiDuocChon));
+            }
+        }
+
         private void HopDongThueXefrm_Load(object sender, EventArgs e)
         {
             scLayer.SplitterDistance = maxWithSightBar;
             this.SizeChanged += Homefrm_SizeChanged;
             lbUserName.Text = "Hi, " + AuthDAO.Instance.User.TenNguoiDung;
-            loadLoaiXe();
+            loadLoaiXe(HopDongThueXeBLL.Instance.loaiXes());
         }
 
-        private void loadLoaiXe()
+        public void loadLoaiXe(List<LoaiXe> loaiXes)
         {
-            List<LoaiXe> loaiXes = HopDongThueXeBLL.Instance.loaiXes();
+            flTable.Controls.Clear();
             foreach(LoaiXe x in loaiXes)
             {
                 Button btn = new Button();
@@ -95,8 +118,20 @@ namespace QLThueXeOto
                 btn.Font = new Font("Arial", 12, FontStyle.Bold); 
                 btn.UseVisualStyleBackColor = false;
                 btn.Cursor = Cursors.Hand;
+
+                //event click of button
+                btn.Click += Btn_Click;
+                btn.Tag = x;
                 flTable.Controls.Add(btn);
             }
+        }
+
+        private void Btn_Click(object sender, EventArgs e)
+        {
+            int loaiXeId = ((sender as Button).Tag as LoaiXe).LoaiXeId;
+            ThueXefrm frm = new ThueXefrm(loaiXeId);
+            this.Hide();
+            frm.Show();
         }
 
         private void btnHidenBar_Click(object sender, EventArgs e)
@@ -105,7 +140,7 @@ namespace QLThueXeOto
 
         }
 
-        private void btnThongKe_Click(object sender, EventArgs e)
+        private void btnThongKe_Click_1(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(btnThongKe.Text))
             {
@@ -128,5 +163,89 @@ namespace QLThueXeOto
                 scItemThongKe.Panel2Collapsed = !scItemThongKe.Panel2Collapsed;
             }
         }
+
+        private void rbTatCaChoNgoi_CheckedChanged(object sender, EventArgs e)
+        {
+            this.soChoNgoiDuocChon = 0;
+            Refresh_Table_When_Choosed();
+        }
+
+        private void rbTatCaKieuDang_CheckedChanged(object sender, EventArgs e)
+        {
+            this.kieuDangDuocChon = null;
+            Refresh_Table_When_Choosed();
+
+        }
+
+        private void rb2Cho_CheckedChanged(object sender, EventArgs e)
+        {
+            this.soChoNgoiDuocChon = 2;
+            Refresh_Table_When_Choosed();
+
+        }
+
+        private void rbMini_CheckedChanged(object sender, EventArgs e)
+        {
+            this.kieuDangDuocChon = "Mini";
+            Refresh_Table_When_Choosed();
+
+        }
+
+        private void rb4Cho_CheckedChanged(object sender, EventArgs e)
+        {
+            this.soChoNgoiDuocChon = 4;
+            Refresh_Table_When_Choosed();
+
+        }
+
+        private void rb5Cho_CheckedChanged(object sender, EventArgs e)
+        {
+            this.soChoNgoiDuocChon = 5;
+            Refresh_Table_When_Choosed();
+
+        }
+
+        private void rb7Cho_CheckedChanged(object sender, EventArgs e)
+        {
+            this.soChoNgoiDuocChon = 7;
+            Refresh_Table_When_Choosed();
+
+        }
+
+        private void rbSedan_CheckedChanged(object sender, EventArgs e)
+        {
+            this.kieuDangDuocChon = "Sedan";
+            Refresh_Table_When_Choosed();
+
+        }
+
+        private void rbHB_CheckedChanged(object sender, EventArgs e)
+        {
+            this.kieuDangDuocChon = "Hatchback";
+            Refresh_Table_When_Choosed();
+
+        }
+
+        private void rbCUV_CheckedChanged(object sender, EventArgs e)
+        {
+            this.kieuDangDuocChon = "CUV";
+            Refresh_Table_When_Choosed();
+
+        }
+
+        private void rbMPV_CheckedChanged(object sender, EventArgs e)
+        {
+            this.kieuDangDuocChon = "MPV";
+            Refresh_Table_When_Choosed();
+
+        }
+
+        private void rbBanTai_CheckedChanged(object sender, EventArgs e)
+        {
+            this.kieuDangDuocChon = "Bán tải";
+            Refresh_Table_When_Choosed();
+
+        }
+
     }
 }
