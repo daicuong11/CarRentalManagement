@@ -11,6 +11,8 @@ namespace QLThueXeOto.DTO
     {
         int xeId;
         int donDatXeId;
+        DateTime ngayThue;
+        DateTime ngayTra;
         int soLuong;
         decimal donGia;
         decimal thanhTien;
@@ -19,10 +21,12 @@ namespace QLThueXeOto.DTO
         {
         }
 
-        public CTDD(int xeId, int donDatXeId, int soLuong, decimal donGia, decimal thanhTien)
+        public CTDD(int xeId, int donDatXeId, DateTime ngayThue, DateTime ngayTra, int soLuong, decimal donGia, decimal thanhTien)
         {
             this.xeId = xeId;
             this.donDatXeId = donDatXeId;
+            this.ngayThue = ngayThue;
+            this.ngayTra = ngayTra;
             this.soLuong = soLuong;
             this.donGia = donGia;
             this.thanhTien = thanhTien;
@@ -32,6 +36,8 @@ namespace QLThueXeOto.DTO
         {
             this.xeId = (int)row["xeId"];
             this.donDatXeId = (int)row["donDatXeId"];
+            this.ngayThue = (DateTime)row["ngayThue"];
+            this.ngayTra = (DateTime)row["ngayTra"];
             this.soLuong = (int)row["soLuong"];
             this.donGia = (decimal)row["donGia"];
             this.thanhTien = (decimal)row["thanhTien"];
@@ -42,5 +48,7 @@ namespace QLThueXeOto.DTO
         public int SoLuong { get => soLuong; set => soLuong = value; }
         public decimal DonGia { get => donGia; set => donGia = value; }
         public decimal ThanhTien { get => thanhTien; set => thanhTien = value; }
+        public DateTime NgayThue { get => ngayThue; set => ngayThue = value; }
+        public DateTime NgayTra { get => ngayTra; set => ngayTra = value; }
     }
 }

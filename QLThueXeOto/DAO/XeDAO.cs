@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLThueXeOto.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -20,6 +21,16 @@ namespace QLThueXeOto.DAO
         public DataTable getAll()
         {
             return DataProvider.Instance.ExecuteQuery("select * from xe");
+        }
+
+        public Xe getXeByXeId(int xeId)
+        {
+            DataTable tb = DataProvider.Instance.ExecuteQuery("select * from xe where xeId = @loaiId ", new object[] { xeId });
+            if(tb.Rows.Count > 0)
+            {
+                return new Xe(tb.Rows[0]);
+            }
+            return null;
         }
 
         public DataTable getXeByLoaiXeId(int loaiId)

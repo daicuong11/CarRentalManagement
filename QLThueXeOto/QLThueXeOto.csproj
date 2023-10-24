@@ -54,11 +54,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ChiTietDonDatBLL.cs" />
     <Compile Include="BLL\DangNhapBLL.cs" />
     <Compile Include="BLL\DonDatXeBLL.cs" />
     <Compile Include="BLL\HomeBLL.cs" />
     <Compile Include="BLL\HopDongThueXeBLL.cs" />
+    <Compile Include="BLL\QuanLyDonDatXeBLL.cs" />
     <Compile Include="BLL\ThueXeBLL.cs" />
+    <Compile Include="ChiTietDonDatfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietDonDatfrm.Designer.cs">
+      <DependentUpon>ChiTietDonDatfrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\AuthDAO.cs" />
     <Compile Include="DAO\CTDDDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
@@ -129,6 +137,9 @@
     <Compile Include="ThueXefrm.Designer.cs">
       <DependentUpon>ThueXefrm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChiTietDonDatfrm.resx">
+      <DependentUpon>ChiTietDonDatfrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangNhapfrm.resx">
       <DependentUpon>DangNhapfrm.cs</DependentUpon>
     </EmbeddedResource>

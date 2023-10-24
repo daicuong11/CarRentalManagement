@@ -163,6 +163,7 @@ namespace QLThueXeOto
 
         private void ThueXefrm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            DonDatXeDAO.Instance.setKH_ID_And_DDX_ID(-1, -1);
             HopDongThueXefrm frm = (HopDongThueXefrm)Application.OpenForms["HopDongThueXefrm"];
             if (frm != null)
             {

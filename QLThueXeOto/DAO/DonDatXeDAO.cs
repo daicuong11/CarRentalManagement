@@ -1,6 +1,7 @@
 ﻿using QLThueXeOto.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
@@ -29,13 +30,22 @@ namespace QLThueXeOto.DAO
             this.donDatXeHienHanhId = donDatXeHienHanhId;
         }
 
+        public DonDatXe getDonDatXeById(int id)
+        {
+            DataTable tb = DataProvider.Instance.ExecuteQuery("select * from dondatxe where donDatXeId = @donDatXeId ", new object[] { id });
+            if(tb.Rows.Count > 0)
+            {
+                return new DonDatXe(tb.Rows[0]);
+            }
+            return null;
+        }
 
         public int Insert_DonDatXe(DonDatXe donDatXe)
         {
             if(this.donDatXeHienHanhId < 0)
             {
-                string query = "INSERT INTO dondatxe OUTPUT INSERTED.donDatXeId VALUES ( @ngaythue , @ngaytra , @tonggia , @khackHangId , @nguoidungid )";
-                int result = (int)DataProvider.Instance.ExecuteScalar(query, new object[] { donDatXe.NgayThue, donDatXe.NgayTra, donDatXe.TongGia, donDatXe.KhachHangId, donDatXe.NguoiDungId });
+                string query = "INSERT INTO dondatxe (tongGia, khachHangId, nguoiDungId) OUTPUT INSERTED.donDatXeId VALUES ( @tonggia , @khackHangId , @nguoidungid )";
+                int result = (int)DataProvider.Instance.ExecuteScalar(query, new object[] { donDatXe.TongGia, donDatXe.KhachHangId, donDatXe.NguoiDungId });
                 if (result > 0)
                 {
                     this.donDatXeHienHanhId = result;
@@ -50,6 +60,11 @@ namespace QLThueXeOto.DAO
             string query = "UPDATE dondatxe SET tongGia = @tongTien WHERE donDatXeId = @dondatxeId ";
             int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { tongTien, this.donDatXeHienHanhId });
             return (result > 0);
+        }
+
+        public DataTable getAll()
+        {
+            return DataProvider.Instance.ExecuteQuery("select * from dondatxe");
         }
     }
 }

@@ -153,13 +153,13 @@ namespace QLThueXeOto
             if(donDatXeHienHanhId < 0)
             {
                 //new mới đơn đặt xe
-                DonDatXe donDatXe = new DonDatXe(ngayThue, ngayTra, tongTien, khachHangId, nguoiDungId);
+                DonDatXe donDatXe = new DonDatXe( tongTien, khachHangId, nguoiDungId);
                 // insert đơn đặt xe
                 newDonDatXeId = DonDatXeDAO.Instance.Insert_DonDatXe(donDatXe);
                 if (newDonDatXeId > 0)
                 {
                     //insert chi tiết đơn đặt
-                    CTDD newCTDD = new CTDD(xeId, newDonDatXeId, soNgayThue, donGia, tongTien);
+                    CTDD newCTDD = new CTDD(xeId, newDonDatXeId, ngayThue, ngayTra , soNgayThue, donGia, tongTien);
                     bool kq = CTDDDAO.Instance.Insert_CTDD(newCTDD);
                     //update trạng thái của xe
                     if (kq)
@@ -179,7 +179,7 @@ namespace QLThueXeOto
             }
 
             // Nếu thêm xe thì chỉ cần thêm ctdd với xe mới và đơn đặt xe hiện hành
-            CTDD ctdd = new CTDD(xeId, donDatXeHienHanhId, soNgayThue, donGia, tongTien);
+            CTDD ctdd = new CTDD(xeId, donDatXeHienHanhId, ngayThue, ngayTra, soNgayThue, donGia, tongTien);
             bool temp = CTDDDAO.Instance.Insert_CTDD(ctdd);
             //update trạng thái của xe
             if (temp)
@@ -244,13 +244,13 @@ namespace QLThueXeOto
             if (donDatXeHienHanhId < 0)
             {
                 //new mới đơn đặt xe
-                DonDatXe donDatXe = new DonDatXe(ngayThue, ngayTra, tongTien, khachHangId, nguoiDungId);
+                DonDatXe donDatXe = new DonDatXe( tongTien, khachHangId, nguoiDungId);
                 // insert đơn đặt xe
                 newDonDatXeId = DonDatXeDAO.Instance.Insert_DonDatXe(donDatXe);
                 if (newDonDatXeId > 0)
                 {
                     //insert chi tiết đơn đặt
-                    CTDD newCTDD = new CTDD(xeId, newDonDatXeId, soNgayThue, donGia, tongTien);
+                    CTDD newCTDD = new CTDD(xeId, newDonDatXeId,ngayThue, ngayTra, soNgayThue, donGia, tongTien);
                     bool kq = CTDDDAO.Instance.Insert_CTDD(newCTDD);
                     //update trạng thái của xe
                     if (kq)
@@ -273,7 +273,7 @@ namespace QLThueXeOto
             }
 
             // Nếu thêm xe thì chỉ cần thêm ctdd với xe mới và đơn đặt xe hiện hành
-            CTDD ctdd = new CTDD(xeId, donDatXeHienHanhId, soNgayThue, donGia, tongTien);
+            CTDD ctdd = new CTDD(xeId, donDatXeHienHanhId,ngayThue, ngayTra, soNgayThue, donGia, tongTien);
             bool temp = CTDDDAO.Instance.Insert_CTDD(ctdd);
             //update trạng thái của xe
             if (temp)

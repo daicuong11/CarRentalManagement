@@ -63,6 +63,10 @@ namespace QLThueXeOto
             scLayer.SplitterDistance = maxWithSightBar;
             this.SizeChanged += Homefrm_SizeChanged;
             lbUserName.Text = "Hi, " + AuthDAO.Instance.User.TenNguoiDung;
+            
+            ///load
+            
+            ///
         }
 
         private void btnHidenBar_Click(object sender, EventArgs e)

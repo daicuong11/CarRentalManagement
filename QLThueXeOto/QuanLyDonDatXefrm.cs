@@ -1,4 +1,5 @@
-﻿using QLThueXeOto.DAO;
+﻿using QLThueXeOto.BLL;
+using QLThueXeOto.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,13 +58,21 @@ namespace QLThueXeOto
                 scItemThongKe.Panel2Collapsed = true;
             }
         }
-
+        private void LoadListDonDatXe(DataTable listDonDatXe)
+        {
+            this.dgvDonDatXe.DataSource = listDonDatXe;
+            dgvDonDatXe.Refresh();
+        }
 
         private void QuanLyDonDatXe_Load(object sender, EventArgs e)
         {
             scLayer.SplitterDistance = maxWithSightBar;
             this.SizeChanged += Homefrm_SizeChanged;
             lbUserName.Text = "Hi, " + AuthDAO.Instance.User.TenNguoiDung;
+
+            ///Load
+            LoadListDonDatXe(QuanLyDonDatXeBLL.Instance.TableDonDatXe());
+            ///
         }
 
         private void btnHidenBar_Click(object sender, EventArgs e)
@@ -102,6 +111,18 @@ namespace QLThueXeOto
             if (frm != null)
             {
                 frm.Show();
+            }
+        }
+
+        private void dgvDonDatXe_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Lấy thông tin từ cột cụ thể trong dòng được click
+                int donDatXeId = (int)dgvDonDatXe.Rows[e.RowIndex].Cells["ID"].Value;
+                ChiTietDonDatfrm frm = new ChiTietDonDatfrm(donDatXeId);
+                frm.ShowDialog();
+
             }
         }
     }

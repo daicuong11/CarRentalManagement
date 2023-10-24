@@ -24,5 +24,15 @@ namespace QLThueXeOto.DAO
             return DataProvider.Instance.ExecuteQuery("Select * from nguoidung");
         }
 
+        public NguoiDung getNguoiDungById(int id)
+        {
+            DataTable tb = DataProvider.Instance.ExecuteQuery("select * from nguoidung where nguoiDungId = @nguoiDungId ", new object[] { id });
+            if(tb.Rows.Count > 0)
+            {
+                return new NguoiDung(tb.Rows[0]);
+            }
+            return null;
+        }
+
     }
 }

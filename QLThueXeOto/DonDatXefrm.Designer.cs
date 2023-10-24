@@ -186,7 +186,7 @@
             this.txtDiaChi.PlaceholderText = "";
             this.txtDiaChi.SelectedText = "";
             this.txtDiaChi.Size = new System.Drawing.Size(525, 32);
-            this.txtDiaChi.TabIndex = 6;
+            this.txtDiaChi.TabIndex = 3;
             // 
             // guna2GradientPanel3
             // 
@@ -226,7 +226,7 @@
             this.txtSoDienThoai.PlaceholderText = "";
             this.txtSoDienThoai.SelectedText = "";
             this.txtSoDienThoai.Size = new System.Drawing.Size(525, 32);
-            this.txtSoDienThoai.TabIndex = 6;
+            this.txtSoDienThoai.TabIndex = 2;
             // 
             // txtHoVaTen
             // 
@@ -248,7 +248,7 @@
             this.txtHoVaTen.PlaceholderText = "";
             this.txtHoVaTen.SelectedText = "";
             this.txtHoVaTen.Size = new System.Drawing.Size(525, 32);
-            this.txtHoVaTen.TabIndex = 4;
+            this.txtHoVaTen.TabIndex = 1;
             // 
             // label4
             // 
@@ -359,7 +359,7 @@
             this.btnThemXe.Location = new System.Drawing.Point(541, 149);
             this.btnThemXe.Name = "btnThemXe";
             this.btnThemXe.Size = new System.Drawing.Size(173, 45);
-            this.btnThemXe.TabIndex = 17;
+            this.btnThemXe.TabIndex = 2;
             this.btnThemXe.Text = "THÊM XE";
             this.btnThemXe.Click += new System.EventHandler(this.btnThemXe_Click);
             // 
@@ -377,7 +377,7 @@
             this.btnDatXe.Location = new System.Drawing.Point(738, 149);
             this.btnDatXe.Name = "btnDatXe";
             this.btnDatXe.Size = new System.Drawing.Size(137, 45);
-            this.btnDatXe.TabIndex = 17;
+            this.btnDatXe.TabIndex = 3;
             this.btnDatXe.Text = "ĐẶT XE";
             this.btnDatXe.Click += new System.EventHandler(this.btnDatXe_Click);
             // 
@@ -459,7 +459,7 @@
             this.dtNgayTra.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtNgayTra.Name = "dtNgayTra";
             this.dtNgayTra.Size = new System.Drawing.Size(276, 36);
-            this.dtNgayTra.TabIndex = 5;
+            this.dtNgayTra.TabIndex = 1;
             this.dtNgayTra.Value = new System.DateTime(2023, 10, 22, 16, 33, 41, 474);
             this.dtNgayTra.ValueChanged += new System.EventHandler(this.dtNgayTra_ValueChanged);
             // 
@@ -485,7 +485,7 @@
             this.dtNgayThue.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtNgayThue.Name = "dtNgayThue";
             this.dtNgayThue.Size = new System.Drawing.Size(267, 36);
-            this.dtNgayThue.TabIndex = 3;
+            this.dtNgayThue.TabIndex = 0;
             this.dtNgayThue.Value = new System.DateTime(2023, 10, 22, 16, 33, 41, 474);
             this.dtNgayThue.ValueChanged += new System.EventHandler(this.dtNgayThue_ValueChanged);
             // 

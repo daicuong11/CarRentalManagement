@@ -18,3 +18,4 @@ D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLT
 D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLThueXeOto.QuanLyLichTrinhfrm.resources
 D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLThueXeOto.ThueXefrm.resources
 D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLThueXeOto.DonDatXefrm.resources
+D:\Nam_3\HK_1\DotNet\worskpace\MidExam\QuanLyThueXeOto\QLThueXeOto\obj\Debug\QLThueXeOto.ChiTietDonDatfrm.resources

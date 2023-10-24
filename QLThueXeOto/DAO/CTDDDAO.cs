@@ -1,6 +1,7 @@
 ﻿using QLThueXeOto.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,11 @@ namespace QLThueXeOto.DAO
             private set { CTDDDAO.instance = value; }
         }
 
+        public DataTable getCTDDByDonDatXeId(int id)
+        {
+            return DataProvider.Instance.ExecuteQuery("select * from ctdd where donDatXeId = @donDatXeId ", new object[] { id });
+        }
+
         public decimal getTongTienByDonDatXeId(int donDatXeId)
         {
             string query = "SELECT SUM(thanhTien) FROM CTDD where donDatXeId = @donDatXeId ";
@@ -27,8 +33,8 @@ namespace QLThueXeOto.DAO
 
         public bool Insert_CTDD(CTDD ctdd)
         {
-            string query = "INSERT INTO CTDD VALUES ( @xeId , @dondatxeId , @soluong , @dongia , @thanhtien );";
-            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { ctdd.XeId, ctdd.DonDatXeId, ctdd.SoLuong, ctdd.DonGia, ctdd.ThanhTien });
+            string query = "INSERT INTO CTDD VALUES ( @xeId , @dondatxeId , @ngayThue , @ngayTra , @soluong , @dongia , @thanhtien );";
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { ctdd.XeId, ctdd.DonDatXeId, ctdd.NgayThue, ctdd.NgayTra, ctdd.SoLuong, ctdd.DonGia, ctdd.ThanhTien });
             return result > 0;
         }
     }
