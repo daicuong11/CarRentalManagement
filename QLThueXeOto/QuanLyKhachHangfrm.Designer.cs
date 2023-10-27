@@ -71,6 +71,8 @@
             this.lbUserName = new System.Windows.Forms.ToolStripMenuItem();
             this.btnLogOut = new System.Windows.Forms.ToolStripMenuItem();
             this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txt_timkiem = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnTimKiem = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.scLayer)).BeginInit();
             this.scLayer.Panel1.SuspendLayout();
             this.scLayer.Panel2.SuspendLayout();
@@ -226,7 +228,7 @@
             this.btnThongKe.Margin = new System.Windows.Forms.Padding(2);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnThongKe.Size = new System.Drawing.Size(2044, 52);
+            this.btnThongKe.Size = new System.Drawing.Size(2206, 52);
             this.btnThongKe.TabIndex = 5;
             this.btnThongKe.Text = "THỐNG KÊ             VV";
             this.btnThongKe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -253,7 +255,7 @@
             this.guna2Button5.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.guna2Button5.Size = new System.Drawing.Size(2042, 52);
+            this.guna2Button5.Size = new System.Drawing.Size(2204, 52);
             this.guna2Button5.TabIndex = 7;
             this.guna2Button5.Text = "KHÁCH HÀNG";
             this.guna2Button5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -279,7 +281,7 @@
             this.guna2Button4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.guna2Button4.Size = new System.Drawing.Size(2043, 52);
+            this.guna2Button4.Size = new System.Drawing.Size(2205, 52);
             this.guna2Button4.TabIndex = 6;
             this.guna2Button4.Text = "DOANH THU";
             this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -414,6 +416,8 @@
             // body
             // 
             this.body.AutoScroll = true;
+            this.body.Controls.Add(this.btnTimKiem);
+            this.body.Controls.Add(this.txt_timkiem);
             this.body.Controls.Add(this.pnContentLeft);
             this.body.Controls.Add(this.pnTitleContent);
             this.body.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -432,11 +436,11 @@
             this.pnContentLeft.Controls.Add(this.groupBox2);
             this.pnContentLeft.Controls.Add(this.panel2);
             this.pnContentLeft.FillColor = System.Drawing.Color.White;
-            this.pnContentLeft.Location = new System.Drawing.Point(17, 109);
+            this.pnContentLeft.Location = new System.Drawing.Point(17, 136);
             this.pnContentLeft.Margin = new System.Windows.Forms.Padding(2);
             this.pnContentLeft.Name = "pnContentLeft";
             this.pnContentLeft.ShadowColor = System.Drawing.Color.Gainsboro;
-            this.pnContentLeft.Size = new System.Drawing.Size(669, 435);
+            this.pnContentLeft.Size = new System.Drawing.Size(669, 408);
             this.pnContentLeft.TabIndex = 2;
             // 
             // groupBox2
@@ -448,7 +452,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
             this.groupBox2.Location = new System.Drawing.Point(300, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(369, 435);
+            this.groupBox2.Size = new System.Drawing.Size(369, 408);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin khách hàng";
@@ -466,7 +470,7 @@
             this.lvKhachHang.HideSelection = false;
             this.lvKhachHang.Location = new System.Drawing.Point(3, 20);
             this.lvKhachHang.Name = "lvKhachHang";
-            this.lvKhachHang.Size = new System.Drawing.Size(363, 412);
+            this.lvKhachHang.Size = new System.Drawing.Size(363, 385);
             this.lvKhachHang.TabIndex = 0;
             this.lvKhachHang.UseCompatibleStateImageBehavior = false;
             this.lvKhachHang.View = System.Windows.Forms.View.Details;
@@ -480,7 +484,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Họ và tên";
-            this.columnHeader2.Width = 200;
+            this.columnHeader2.Width = 172;
             // 
             // columnHeader3
             // 
@@ -499,7 +503,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(300, 435);
+            this.panel2.Size = new System.Drawing.Size(300, 408);
             this.panel2.TabIndex = 0;
             // 
             // groupBox1
@@ -523,7 +527,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(300, 435);
+            this.groupBox1.Size = new System.Drawing.Size(300, 408);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết khách hàng ";
@@ -722,6 +726,47 @@
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
             this.aToolStripMenuItem.Size = new System.Drawing.Size(32, 24);
             // 
+            // txt_timkiem
+            // 
+            this.txt_timkiem.BorderRadius = 12;
+            this.txt_timkiem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_timkiem.DefaultText = "";
+            this.txt_timkiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_timkiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_timkiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_timkiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_timkiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_timkiem.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_timkiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_timkiem.Location = new System.Drawing.Point(317, 104);
+            this.txt_timkiem.Name = "txt_timkiem";
+            this.txt_timkiem.Padding = new System.Windows.Forms.Padding(9, 4, 4, 4);
+            this.txt_timkiem.PasswordChar = '\0';
+            this.txt_timkiem.PlaceholderText = "Tìm kiếm ";
+            this.txt_timkiem.SelectedText = "";
+            this.txt_timkiem.Size = new System.Drawing.Size(250, 26);
+            this.txt_timkiem.TabIndex = 2;
+            this.txt_timkiem.TextChanged += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.BorderRadius = 12;
+            this.btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTimKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTimKiem.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTimKiem.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.Location = new System.Drawing.Point(576, 104);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(127, 26);
+            this.btnTimKiem.TabIndex = 3;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
             // QuanLyKhachHangfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -806,5 +851,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private Guna.UI2.WinForms.Guna2TextBox txt_timkiem;
+        private Guna.UI2.WinForms.Guna2GradientButton btnTimKiem;
     }
 }

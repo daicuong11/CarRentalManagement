@@ -46,6 +46,19 @@ namespace QLThueXeOto.BLL
             bool check = KhachHangDAO.Instance.Delete_KhachHang(ma);
             return check;
         }
-
+        public int CheckDuplicateKhachHang(string sdt)
+        {
+            return KhachHangDAO.Instance.getKhachHangBySoDienThoai(sdt);
+        }
+        public List<KhachHang> ListKhachHangTuKhoaTimKiem(string tuKhoaSearch)
+        {
+            List<KhachHang> list = new List<KhachHang>();
+            DataTable kh = KhachHangDAO.Instance.getKhachHangByTuKhoaTimKiem(tuKhoaSearch);
+            foreach (DataRow dr in kh.Rows)
+            {
+                list.Add(new KhachHang(dr));
+            }
+            return list;
+        }
     }
 }

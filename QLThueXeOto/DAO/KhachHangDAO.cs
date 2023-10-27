@@ -65,5 +65,13 @@ namespace QLThueXeOto.DAO
             
             return DataProvider.Instance.ExecuteQuery("select * from khachhang");
         }
+        public DataTable getKhachHangByTuKhoaTimKiem(string tuKhoaTimKiem)
+        {
+            string query = "select * from khachhang where (hoTen like N'%"
+                + tuKhoaTimKiem + "%' or soDienThoai like '%"
+                + tuKhoaTimKiem + "%' or diaChi like N'%"
+                + tuKhoaTimKiem + "%')";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

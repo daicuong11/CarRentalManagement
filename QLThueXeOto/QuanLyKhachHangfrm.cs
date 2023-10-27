@@ -70,10 +70,10 @@ namespace QLThueXeOto
             //lbUserName.Text = "Hi, " + AuthDAO.Instance.User.TenNguoiDung;
             LoadKhachHangData();
         }
-        private void LoadKhachHangData()
+        private void LoadKhachHangData(string searchkey = "")
         {
             lvKhachHang.Items.Clear();
-            foreach (KhachHang row in KhachHangBLL.Instance.ListKhachHang())
+            foreach (KhachHang row in KhachHangBLL.Instance.ListKhachHangTuKhoaTimKiem(searchkey))
             {
                 ListViewItem lvi = new ListViewItem(row.KhachHangHangId.ToString());
                 InsertListItem(row);
@@ -144,6 +144,11 @@ namespace QLThueXeOto
             kh.HoTen = textBox_hovaten.Text;
             kh.SoDienThoai = textBox_sdt.Text;
             kh.DiaChi = textBox_diachi.Text;
+            if(KhachHangBLL.Instance.CheckDuplicateKhachHang(kh.SoDienThoai) != -1)
+            {
+                MessageBox.Show("Số điện thoại đã tồn tại");
+                return;
+            } 
             int check = KhachHangBLL.Instance.InsertKhachHang(kh);
             if (check > 0)
             {
@@ -172,6 +177,16 @@ namespace QLThueXeOto
             kh.HoTen = textBox_hovaten.Text;
             kh.SoDienThoai = textBox_sdt.Text;
             kh.DiaChi = textBox_diachi.Text;
+            // nếu trùng
+            if(KhachHangBLL.Instance.CheckDuplicateKhachHang(kh.SoDienThoai) > 0)
+            {
+                // nếu ko phải update chính mình
+                if (KhachHangBLL.Instance.CheckDuplicateKhachHang(kh.SoDienThoai) != kh.KhachHangHangId)
+                {
+                    MessageBox.Show("Số điện thoại đã tồn tại");
+                    return;
+                }
+            }
             if (KhachHangBLL.Instance.UpdateKhachHang(kh))
             {
                  LoadKhachHangData();
@@ -206,6 +221,12 @@ namespace QLThueXeOto
             {
                 MessageBox.Show("Xóa thất bại");
             }
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string searchkey = txt_timkiem.Text.Trim();
+            LoadKhachHangData(searchkey);
         }
     }
 }

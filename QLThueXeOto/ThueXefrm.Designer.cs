@@ -29,11 +29,19 @@
         private void InitializeComponent()
         {
             this.scLayer = new System.Windows.Forms.SplitContainer();
+            this.btnQLKhachHang = new Guna.UI2.WinForms.Guna2Button();
+            this.btnQLLichTrinh = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.scItemThongKe = new System.Windows.Forms.SplitContainer();
+            this.btnThongKe = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnQLDonDatXe = new Guna.UI2.WinForms.Guna2Button();
+            this.btnQLOto = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnHidenBar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnChoThue = new Guna.UI2.WinForms.Guna2Button();
             this.body = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -61,6 +69,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.flTable = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnTimKiem = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbLoaiXe = new System.Windows.Forms.Label();
             this.pnContentHead = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,16 +78,6 @@
             this.menuTripUserInfo = new System.Windows.Forms.MenuStrip();
             this.lbUserName = new System.Windows.Forms.ToolStripMenuItem();
             this.btnLogOut = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnTimKiem = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnQLKhachHang = new Guna.UI2.WinForms.Guna2Button();
-            this.btnQLLichTrinh = new Guna.UI2.WinForms.Guna2Button();
-            this.btnThongKe = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnQLDonDatXe = new Guna.UI2.WinForms.Guna2Button();
-            this.btnQLOto = new Guna.UI2.WinForms.Guna2Button();
-            this.btnChoThue = new Guna.UI2.WinForms.Guna2Button();
             this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.scLayer)).BeginInit();
             this.scLayer.Panel1.SuspendLayout();
@@ -103,6 +103,7 @@
             // 
             this.scLayer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scLayer.Location = new System.Drawing.Point(0, 0);
+            this.scLayer.Margin = new System.Windows.Forms.Padding(2);
             this.scLayer.Name = "scLayer";
             // 
             // scLayer.Panel1
@@ -121,25 +122,80 @@
             // 
             this.scLayer.Panel2.Controls.Add(this.body);
             this.scLayer.Panel2.Controls.Add(this.header);
-            this.scLayer.Size = new System.Drawing.Size(1924, 1055);
-            this.scLayer.SplitterDistance = 300;
+            this.scLayer.Size = new System.Drawing.Size(1028, 609);
+            this.scLayer.SplitterDistance = 160;
+            this.scLayer.SplitterWidth = 3;
             this.scLayer.TabIndex = 2;
+            // 
+            // btnQLKhachHang
+            // 
+            this.btnQLKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnQLKhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQLKhachHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnQLKhachHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnQLKhachHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnQLKhachHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnQLKhachHang.FillColor = System.Drawing.Color.Transparent;
+            this.btnQLKhachHang.Font = new System.Drawing.Font("Arial", 10.8F);
+            this.btnQLKhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(163)))), ((int)(((byte)(183)))));
+            this.btnQLKhachHang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(39)))));
+            this.btnQLKhachHang.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnQLKhachHang.Image = global::QLThueXeOto.Properties.Resources.boxblack;
+            this.btnQLKhachHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnQLKhachHang.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnQLKhachHang.Location = new System.Drawing.Point(0, 300);
+            this.btnQLKhachHang.Margin = new System.Windows.Forms.Padding(2);
+            this.btnQLKhachHang.Name = "btnQLKhachHang";
+            this.btnQLKhachHang.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btnQLKhachHang.Size = new System.Drawing.Size(155, 52);
+            this.btnQLKhachHang.TabIndex = 8;
+            this.btnQLKhachHang.Text = "QUẢN LÝ KHÁCH HÀNG";
+            this.btnQLKhachHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btnQLLichTrinh
+            // 
+            this.btnQLLichTrinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnQLLichTrinh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQLLichTrinh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnQLLichTrinh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnQLLichTrinh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnQLLichTrinh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnQLLichTrinh.FillColor = System.Drawing.Color.Transparent;
+            this.btnQLLichTrinh.Font = new System.Drawing.Font("Arial", 10.8F);
+            this.btnQLLichTrinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(163)))), ((int)(((byte)(183)))));
+            this.btnQLLichTrinh.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(39)))));
+            this.btnQLLichTrinh.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnQLLichTrinh.Image = global::QLThueXeOto.Properties.Resources.boxblack;
+            this.btnQLLichTrinh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnQLLichTrinh.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnQLLichTrinh.Location = new System.Drawing.Point(0, 243);
+            this.btnQLLichTrinh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnQLLichTrinh.Name = "btnQLLichTrinh";
+            this.btnQLLichTrinh.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btnQLLichTrinh.Size = new System.Drawing.Size(155, 52);
+            this.btnQLLichTrinh.TabIndex = 7;
+            this.btnQLLichTrinh.Text = "QUẢN LÝ LỊCH TRÌNH";
+            this.btnQLLichTrinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.Controls.Add(this.scItemThongKe);
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 439);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 357);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(297, 211);
+            this.guna2Panel1.Size = new System.Drawing.Size(158, 171);
             this.guna2Panel1.TabIndex = 6;
             // 
             // scItemThongKe
             // 
             this.scItemThongKe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.scItemThongKe.Location = new System.Drawing.Point(1, 3);
+            this.scItemThongKe.Location = new System.Drawing.Point(1, 2);
+            this.scItemThongKe.Margin = new System.Windows.Forms.Padding(2);
             this.scItemThongKe.Name = "scItemThongKe";
             this.scItemThongKe.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -152,10 +208,142 @@
             this.scItemThongKe.Panel2.Controls.Add(this.guna2Button5);
             this.scItemThongKe.Panel2.Controls.Add(this.guna2Button4);
             this.scItemThongKe.Panel2MinSize = 0;
-            this.scItemThongKe.Size = new System.Drawing.Size(294, 205);
-            this.scItemThongKe.SplitterDistance = 62;
-            this.scItemThongKe.SplitterWidth = 8;
+            this.scItemThongKe.Size = new System.Drawing.Size(155, 167);
+            this.scItemThongKe.SplitterWidth = 6;
             this.scItemThongKe.TabIndex = 7;
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThongKe.BackColor = System.Drawing.Color.Transparent;
+            this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThongKe.FillColor = System.Drawing.Color.Transparent;
+            this.btnThongKe.Font = new System.Drawing.Font("Arial", 10.8F);
+            this.btnThongKe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(163)))), ((int)(((byte)(183)))));
+            this.btnThongKe.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(39)))));
+            this.btnThongKe.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnThongKe.Image = global::QLThueXeOto.Properties.Resources.boxblack;
+            this.btnThongKe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThongKe.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnThongKe.Location = new System.Drawing.Point(-1, 2);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.PressedColor = System.Drawing.Color.Transparent;
+            this.btnThongKe.Size = new System.Drawing.Size(164, 52);
+            this.btnThongKe.TabIndex = 5;
+            this.btnThongKe.Text = "THỐNG KÊ             VV";
+            this.btnThongKe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
+            // 
+            // guna2Button5
+            // 
+            this.guna2Button5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button5.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button5.Font = new System.Drawing.Font("Arial", 10.8F);
+            this.guna2Button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(163)))), ((int)(((byte)(183)))));
+            this.guna2Button5.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(39)))));
+            this.guna2Button5.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2Button5.Image = global::QLThueXeOto.Properties.Resources.cicler;
+            this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button5.ImageSize = new System.Drawing.Size(10, 10);
+            this.guna2Button5.Location = new System.Drawing.Point(0, 58);
+            this.guna2Button5.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.guna2Button5.Size = new System.Drawing.Size(160, 52);
+            this.guna2Button5.TabIndex = 7;
+            this.guna2Button5.Text = "KHÁCH HÀNG";
+            this.guna2Button5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button4.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button4.Font = new System.Drawing.Font("Arial", 10.8F);
+            this.guna2Button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(163)))), ((int)(((byte)(183)))));
+            this.guna2Button4.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(39)))));
+            this.guna2Button4.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.Image = global::QLThueXeOto.Properties.Resources.cicler;
+            this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button4.ImageSize = new System.Drawing.Size(10, 10);
+            this.guna2Button4.Location = new System.Drawing.Point(0, 2);
+            this.guna2Button4.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.guna2Button4.Size = new System.Drawing.Size(162, 52);
+            this.guna2Button4.TabIndex = 6;
+            this.guna2Button4.Text = "DOANH THU";
+            this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btnQLDonDatXe
+            // 
+            this.btnQLDonDatXe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnQLDonDatXe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQLDonDatXe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnQLDonDatXe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnQLDonDatXe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnQLDonDatXe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnQLDonDatXe.FillColor = System.Drawing.Color.Transparent;
+            this.btnQLDonDatXe.Font = new System.Drawing.Font("Arial", 10.8F);
+            this.btnQLDonDatXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(163)))), ((int)(((byte)(183)))));
+            this.btnQLDonDatXe.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(39)))));
+            this.btnQLDonDatXe.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnQLDonDatXe.Image = global::QLThueXeOto.Properties.Resources.boxblack;
+            this.btnQLDonDatXe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnQLDonDatXe.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnQLDonDatXe.Location = new System.Drawing.Point(0, 186);
+            this.btnQLDonDatXe.Margin = new System.Windows.Forms.Padding(2);
+            this.btnQLDonDatXe.Name = "btnQLDonDatXe";
+            this.btnQLDonDatXe.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btnQLDonDatXe.Size = new System.Drawing.Size(155, 52);
+            this.btnQLDonDatXe.TabIndex = 4;
+            this.btnQLDonDatXe.Text = "QUẢN LÝ ĐƠN ĐẶT XE";
+            this.btnQLDonDatXe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btnQLOto
+            // 
+            this.btnQLOto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnQLOto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQLOto.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnQLOto.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnQLOto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnQLOto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnQLOto.FillColor = System.Drawing.Color.Transparent;
+            this.btnQLOto.Font = new System.Drawing.Font("Arial", 10.8F);
+            this.btnQLOto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(163)))), ((int)(((byte)(183)))));
+            this.btnQLOto.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(39)))));
+            this.btnQLOto.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnQLOto.Image = global::QLThueXeOto.Properties.Resources.boxblack;
+            this.btnQLOto.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnQLOto.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnQLOto.Location = new System.Drawing.Point(0, 129);
+            this.btnQLOto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnQLOto.Name = "btnQLOto";
+            this.btnQLOto.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btnQLOto.Size = new System.Drawing.Size(155, 52);
+            this.btnQLOto.TabIndex = 3;
+            this.btnQLOto.Text = "QUẢN LÝ OTO";
+            this.btnQLOto.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // panel1
             // 
@@ -164,8 +352,9 @@
             this.panel1.Controls.Add(this.btnHidenBar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 62);
+            this.panel1.Size = new System.Drawing.Size(160, 50);
             this.panel1.TabIndex = 2;
             // 
             // lbTitle
@@ -176,9 +365,10 @@
             this.lbTitle.BackColor = System.Drawing.Color.Transparent;
             this.lbTitle.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitle.ForeColor = System.Drawing.Color.White;
-            this.lbTitle.Location = new System.Drawing.Point(77, 12);
+            this.lbTitle.Location = new System.Drawing.Point(58, 10);
+            this.lbTitle.Margin = new System.Windows.Forms.Padding(2);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(106, 34);
+            this.lbTitle.Size = new System.Drawing.Size(82, 28);
             this.lbTitle.TabIndex = 1;
             this.lbTitle.Text = "Công ty";
             this.lbTitle.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -196,12 +386,39 @@
             this.btnHidenBar.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHidenBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(108)))), ((int)(((byte)(154)))));
             this.btnHidenBar.HoverState.ForeColor = System.Drawing.Color.Blue;
-            this.btnHidenBar.Location = new System.Drawing.Point(211, 3);
+            this.btnHidenBar.Location = new System.Drawing.Point(93, 2);
+            this.btnHidenBar.Margin = new System.Windows.Forms.Padding(2);
             this.btnHidenBar.Name = "btnHidenBar";
-            this.btnHidenBar.Size = new System.Drawing.Size(86, 56);
+            this.btnHidenBar.Size = new System.Drawing.Size(64, 46);
             this.btnHidenBar.TabIndex = 0;
             this.btnHidenBar.Text = "<<";
             this.btnHidenBar.Click += new System.EventHandler(this.btnHidenBar_Click);
+            // 
+            // btnChoThue
+            // 
+            this.btnChoThue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChoThue.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChoThue.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnChoThue.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnChoThue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChoThue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnChoThue.FillColor = System.Drawing.Color.DimGray;
+            this.btnChoThue.Font = new System.Drawing.Font("Arial", 10.8F);
+            this.btnChoThue.ForeColor = System.Drawing.Color.White;
+            this.btnChoThue.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(39)))));
+            this.btnChoThue.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnChoThue.Image = global::QLThueXeOto.Properties.Resources.boxblack;
+            this.btnChoThue.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnChoThue.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnChoThue.Location = new System.Drawing.Point(0, 72);
+            this.btnChoThue.Margin = new System.Windows.Forms.Padding(2);
+            this.btnChoThue.Name = "btnChoThue";
+            this.btnChoThue.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btnChoThue.Size = new System.Drawing.Size(155, 52);
+            this.btnChoThue.TabIndex = 1;
+            this.btnChoThue.Text = "HỢP ĐỒNG CHO THUÊ";
+            this.btnChoThue.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // body
             // 
@@ -209,9 +426,10 @@
             this.body.Controls.Add(this.guna2GradientPanel1);
             this.body.Controls.Add(this.pnContentHead);
             this.body.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.body.Location = new System.Drawing.Point(0, 62);
+            this.body.Location = new System.Drawing.Point(0, 50);
+            this.body.Margin = new System.Windows.Forms.Padding(2);
             this.body.Name = "body";
-            this.body.Size = new System.Drawing.Size(1620, 993);
+            this.body.Size = new System.Drawing.Size(865, 559);
             this.body.TabIndex = 1;
             // 
             // guna2GradientPanel1
@@ -224,9 +442,10 @@
             this.guna2GradientPanel1.Controls.Add(this.panel4);
             this.guna2GradientPanel1.Controls.Add(this.panel3);
             this.guna2GradientPanel1.Controls.Add(this.panel2);
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(35, 150);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(26, 122);
+            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1549, 812);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(812, 412);
             this.guna2GradientPanel1.TabIndex = 4;
             // 
             // panel4
@@ -254,9 +473,10 @@
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 549);
+            this.panel4.Location = new System.Drawing.Point(0, 198);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1549, 263);
+            this.panel4.Size = new System.Drawing.Size(812, 214);
             this.panel4.TabIndex = 2;
             // 
             // btnLoc
@@ -268,10 +488,11 @@
             this.btnLoc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLoc.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoc.ForeColor = System.Drawing.Color.White;
-            this.btnLoc.Location = new System.Drawing.Point(1388, 149);
+            this.btnLoc.Location = new System.Drawing.Point(691, 121);
+            this.btnLoc.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoc.Name = "btnLoc";
             this.btnLoc.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnLoc.Size = new System.Drawing.Size(148, 101);
+            this.btnLoc.Size = new System.Drawing.Size(111, 82);
             this.btnLoc.TabIndex = 7;
             this.btnLoc.Text = "LỌC";
             this.btnLoc.Click += new System.EventHandler(this.btnLoc_Click);
@@ -286,9 +507,10 @@
             this.rdDien.CheckedState.InnerOffset = -4;
             this.rdDien.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdDien.ForeColor = System.Drawing.Color.DimGray;
-            this.rdDien.Location = new System.Drawing.Point(866, 223);
+            this.rdDien.Location = new System.Drawing.Point(650, 181);
+            this.rdDien.Margin = new System.Windows.Forms.Padding(2);
             this.rdDien.Name = "rdDien";
-            this.rdDien.Size = new System.Drawing.Size(70, 27);
+            this.rdDien.Size = new System.Drawing.Size(59, 22);
             this.rdDien.TabIndex = 6;
             this.rdDien.Text = "Điện";
             this.rdDien.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -307,9 +529,10 @@
             this.rdDauDiesel.CheckedState.InnerOffset = -4;
             this.rdDauDiesel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdDauDiesel.ForeColor = System.Drawing.Color.DimGray;
-            this.rdDauDiesel.Location = new System.Drawing.Point(587, 221);
+            this.rdDauDiesel.Location = new System.Drawing.Point(440, 180);
+            this.rdDauDiesel.Margin = new System.Windows.Forms.Padding(2);
             this.rdDauDiesel.Name = "rdDauDiesel";
-            this.rdDauDiesel.Size = new System.Drawing.Size(126, 27);
+            this.rdDauDiesel.Size = new System.Drawing.Size(104, 22);
             this.rdDauDiesel.TabIndex = 6;
             this.rdDauDiesel.Text = "Dầu Diesel";
             this.rdDauDiesel.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -328,9 +551,10 @@
             this.rdXang.CheckedState.InnerOffset = -4;
             this.rdXang.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdXang.ForeColor = System.Drawing.Color.DimGray;
-            this.rdXang.Location = new System.Drawing.Point(289, 221);
+            this.rdXang.Location = new System.Drawing.Point(217, 180);
+            this.rdXang.Margin = new System.Windows.Forms.Padding(2);
             this.rdXang.Name = "rdXang";
-            this.rdXang.Size = new System.Drawing.Size(76, 27);
+            this.rdXang.Size = new System.Drawing.Size(63, 22);
             this.rdXang.TabIndex = 6;
             this.rdXang.Text = "Xăng";
             this.rdXang.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -350,9 +574,10 @@
             this.rbTatCa.CheckedState.InnerOffset = -4;
             this.rbTatCa.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbTatCa.ForeColor = System.Drawing.Color.DimGray;
-            this.rbTatCa.Location = new System.Drawing.Point(30, 223);
+            this.rbTatCa.Location = new System.Drawing.Point(22, 181);
+            this.rbTatCa.Margin = new System.Windows.Forms.Padding(2);
             this.rbTatCa.Name = "rbTatCa";
-            this.rbTatCa.Size = new System.Drawing.Size(87, 27);
+            this.rbTatCa.Size = new System.Drawing.Size(69, 22);
             this.rbTatCa.TabIndex = 6;
             this.rbTatCa.TabStop = true;
             this.rbTatCa.Text = "Tất cả";
@@ -371,9 +596,10 @@
             this.cbCMR360.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbCMR360.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCMR360.ForeColor = System.Drawing.Color.DimGray;
-            this.cbCMR360.Location = new System.Drawing.Point(866, 149);
+            this.cbCMR360.Location = new System.Drawing.Point(650, 121);
+            this.cbCMR360.Margin = new System.Windows.Forms.Padding(2);
             this.cbCMR360.Name = "cbCMR360";
-            this.cbCMR360.Size = new System.Drawing.Size(141, 27);
+            this.cbCMR360.Size = new System.Drawing.Size(115, 22);
             this.cbCMR360.TabIndex = 5;
             this.cbCMR360.Text = "Camera 360";
             this.cbCMR360.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -391,9 +617,10 @@
             this.cbCamBienVaCham.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbCamBienVaCham.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCamBienVaCham.ForeColor = System.Drawing.Color.DimGray;
-            this.cbCamBienVaCham.Location = new System.Drawing.Point(587, 149);
+            this.cbCamBienVaCham.Location = new System.Drawing.Point(440, 121);
+            this.cbCamBienVaCham.Margin = new System.Windows.Forms.Padding(2);
             this.cbCamBienVaCham.Name = "cbCamBienVaCham";
-            this.cbCamBienVaCham.Size = new System.Drawing.Size(194, 27);
+            this.cbCamBienVaCham.Size = new System.Drawing.Size(157, 22);
             this.cbCamBienVaCham.TabIndex = 5;
             this.cbCamBienVaCham.Text = "Cảm biến va chạm";
             this.cbCamBienVaCham.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -411,9 +638,10 @@
             this.cbNapThung.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbNapThung.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNapThung.ForeColor = System.Drawing.Color.DimGray;
-            this.cbNapThung.Location = new System.Drawing.Point(289, 149);
+            this.cbNapThung.Location = new System.Drawing.Point(217, 121);
+            this.cbNapThung.Margin = new System.Windows.Forms.Padding(2);
             this.cbNapThung.Name = "cbNapThung";
-            this.cbNapThung.Size = new System.Drawing.Size(212, 27);
+            this.cbNapThung.Size = new System.Drawing.Size(168, 22);
             this.cbNapThung.TabIndex = 5;
             this.cbNapThung.Text = "Nắp thùng xe bán tải";
             this.cbNapThung.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -431,9 +659,10 @@
             this.cbCamBienLop.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbCamBienLop.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCamBienLop.ForeColor = System.Drawing.Color.DimGray;
-            this.cbCamBienLop.Location = new System.Drawing.Point(30, 149);
+            this.cbCamBienLop.Location = new System.Drawing.Point(22, 121);
+            this.cbCamBienLop.Margin = new System.Windows.Forms.Padding(2);
             this.cbCamBienLop.Name = "cbCamBienLop";
-            this.cbCamBienLop.Size = new System.Drawing.Size(147, 27);
+            this.cbCamBienLop.Size = new System.Drawing.Size(120, 22);
             this.cbCamBienLop.TabIndex = 5;
             this.cbCamBienLop.Text = "Cảm biến lốp";
             this.cbCamBienLop.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -451,9 +680,10 @@
             this.cbCanhBaoTocDo.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbCanhBaoTocDo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCanhBaoTocDo.ForeColor = System.Drawing.Color.DimGray;
-            this.cbCanhBaoTocDo.Location = new System.Drawing.Point(1168, 104);
+            this.cbCanhBaoTocDo.Location = new System.Drawing.Point(876, 84);
+            this.cbCanhBaoTocDo.Margin = new System.Windows.Forms.Padding(2);
             this.cbCanhBaoTocDo.Name = "cbCanhBaoTocDo";
-            this.cbCanhBaoTocDo.Size = new System.Drawing.Size(177, 27);
+            this.cbCanhBaoTocDo.Size = new System.Drawing.Size(142, 22);
             this.cbCanhBaoTocDo.TabIndex = 4;
             this.cbCanhBaoTocDo.Text = "Cảnh báo tốc độ";
             this.cbCanhBaoTocDo.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -471,9 +701,10 @@
             this.cbCMRLui.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbCMRLui.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCMRLui.ForeColor = System.Drawing.Color.DimGray;
-            this.cbCMRLui.Location = new System.Drawing.Point(1168, 59);
+            this.cbCMRLui.Location = new System.Drawing.Point(876, 48);
+            this.cbCMRLui.Margin = new System.Windows.Forms.Padding(2);
             this.cbCMRLui.Name = "cbCMRLui";
-            this.cbCMRLui.Size = new System.Drawing.Size(127, 27);
+            this.cbCMRLui.Size = new System.Drawing.Size(103, 22);
             this.cbCMRLui.TabIndex = 3;
             this.cbCMRLui.Text = "Camera lùi";
             this.cbCMRLui.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -491,9 +722,10 @@
             this.cbLopDuPhong.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbLopDuPhong.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLopDuPhong.ForeColor = System.Drawing.Color.DimGray;
-            this.cbLopDuPhong.Location = new System.Drawing.Point(866, 104);
+            this.cbLopDuPhong.Location = new System.Drawing.Point(650, 84);
+            this.cbLopDuPhong.Margin = new System.Windows.Forms.Padding(2);
             this.cbLopDuPhong.Name = "cbLopDuPhong";
-            this.cbLopDuPhong.Size = new System.Drawing.Size(154, 27);
+            this.cbLopDuPhong.Size = new System.Drawing.Size(125, 22);
             this.cbLopDuPhong.TabIndex = 4;
             this.cbLopDuPhong.Text = "Lốp dự phòng";
             this.cbLopDuPhong.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -511,9 +743,10 @@
             this.cbDinhViGPS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbDinhViGPS.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDinhViGPS.ForeColor = System.Drawing.Color.DimGray;
-            this.cbDinhViGPS.Location = new System.Drawing.Point(866, 59);
+            this.cbDinhViGPS.Location = new System.Drawing.Point(650, 48);
+            this.cbDinhViGPS.Margin = new System.Windows.Forms.Padding(2);
             this.cbDinhViGPS.Name = "cbDinhViGPS";
-            this.cbDinhViGPS.Size = new System.Drawing.Size(137, 27);
+            this.cbDinhViGPS.Size = new System.Drawing.Size(112, 22);
             this.cbDinhViGPS.TabIndex = 3;
             this.cbDinhViGPS.Text = "Định vị GPS";
             this.cbDinhViGPS.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -531,9 +764,10 @@
             this.cbCMRHanhTrinh.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbCMRHanhTrinh.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCMRHanhTrinh.ForeColor = System.Drawing.Color.DimGray;
-            this.cbCMRHanhTrinh.Location = new System.Drawing.Point(587, 104);
+            this.cbCMRHanhTrinh.Location = new System.Drawing.Point(440, 84);
+            this.cbCMRHanhTrinh.Margin = new System.Windows.Forms.Padding(2);
             this.cbCMRHanhTrinh.Name = "cbCMRHanhTrinh";
-            this.cbCMRHanhTrinh.Size = new System.Drawing.Size(194, 27);
+            this.cbCMRHanhTrinh.Size = new System.Drawing.Size(153, 22);
             this.cbCMRHanhTrinh.TabIndex = 4;
             this.cbCMRHanhTrinh.Text = "Camera hành trình";
             this.cbCMRHanhTrinh.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -551,9 +785,10 @@
             this.cbBluetooth.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbBluetooth.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBluetooth.ForeColor = System.Drawing.Color.DimGray;
-            this.cbBluetooth.Location = new System.Drawing.Point(587, 59);
+            this.cbBluetooth.Location = new System.Drawing.Point(440, 48);
+            this.cbBluetooth.Margin = new System.Windows.Forms.Padding(2);
             this.cbBluetooth.Name = "cbBluetooth";
-            this.cbBluetooth.Size = new System.Drawing.Size(114, 27);
+            this.cbBluetooth.Size = new System.Drawing.Size(92, 22);
             this.cbBluetooth.TabIndex = 3;
             this.cbBluetooth.Text = "Bluetooth";
             this.cbBluetooth.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -571,9 +806,10 @@
             this.cbKheCamUSB.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbKheCamUSB.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbKheCamUSB.ForeColor = System.Drawing.Color.DimGray;
-            this.cbKheCamUSB.Location = new System.Drawing.Point(289, 104);
+            this.cbKheCamUSB.Location = new System.Drawing.Point(217, 84);
+            this.cbKheCamUSB.Margin = new System.Windows.Forms.Padding(2);
             this.cbKheCamUSB.Name = "cbKheCamUSB";
-            this.cbKheCamUSB.Size = new System.Drawing.Size(154, 27);
+            this.cbKheCamUSB.Size = new System.Drawing.Size(126, 22);
             this.cbKheCamUSB.TabIndex = 4;
             this.cbKheCamUSB.Text = "Khe cắm USB";
             this.cbKheCamUSB.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -591,9 +827,10 @@
             this.cbCuaSoTroi.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbCuaSoTroi.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCuaSoTroi.ForeColor = System.Drawing.Color.DimGray;
-            this.cbCuaSoTroi.Location = new System.Drawing.Point(289, 59);
+            this.cbCuaSoTroi.Location = new System.Drawing.Point(217, 48);
+            this.cbCuaSoTroi.Margin = new System.Windows.Forms.Padding(2);
             this.cbCuaSoTroi.Name = "cbCuaSoTroi";
-            this.cbCuaSoTroi.Size = new System.Drawing.Size(133, 27);
+            this.cbCuaSoTroi.Size = new System.Drawing.Size(108, 22);
             this.cbCuaSoTroi.TabIndex = 3;
             this.cbCuaSoTroi.Text = "Cửa sổ trời";
             this.cbCuaSoTroi.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -611,9 +848,10 @@
             this.cbCMRCapLe.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbCMRCapLe.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCMRCapLe.ForeColor = System.Drawing.Color.DimGray;
-            this.cbCMRCapLe.Location = new System.Drawing.Point(30, 104);
+            this.cbCMRCapLe.Location = new System.Drawing.Point(22, 84);
+            this.cbCMRCapLe.Margin = new System.Windows.Forms.Padding(2);
             this.cbCMRCapLe.Name = "cbCMRCapLe";
-            this.cbCMRCapLe.Size = new System.Drawing.Size(161, 27);
+            this.cbCMRCapLe.Size = new System.Drawing.Size(130, 22);
             this.cbCMRCapLe.TabIndex = 4;
             this.cbCMRCapLe.Text = "Camera cập lề";
             this.cbCMRCapLe.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -631,9 +869,10 @@
             this.cbBanDo.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbBanDo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBanDo.ForeColor = System.Drawing.Color.DimGray;
-            this.cbBanDo.Location = new System.Drawing.Point(30, 59);
+            this.cbBanDo.Location = new System.Drawing.Point(22, 48);
+            this.cbBanDo.Margin = new System.Windows.Forms.Padding(2);
             this.cbBanDo.Name = "cbBanDo";
-            this.cbBanDo.Size = new System.Drawing.Size(94, 27);
+            this.cbBanDo.Size = new System.Drawing.Size(77, 22);
             this.cbBanDo.TabIndex = 3;
             this.cbBanDo.Text = "Bản đồ";
             this.cbBanDo.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -647,9 +886,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(24, 193);
+            this.label3.Location = new System.Drawing.Point(18, 157);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 27);
+            this.label3.Size = new System.Drawing.Size(101, 22);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nhiên liệu";
             // 
@@ -658,9 +898,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(25, 16);
+            this.label2.Location = new System.Drawing.Point(19, 13);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 27);
+            this.label2.Size = new System.Drawing.Size(104, 22);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tính năng";
             // 
@@ -671,9 +912,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.flTable);
-            this.panel3.Location = new System.Drawing.Point(0, 63);
+            this.panel3.Location = new System.Drawing.Point(0, 51);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1549, 482);
+            this.panel3.Size = new System.Drawing.Size(812, 144);
             this.panel3.TabIndex = 1;
             // 
             // flTable
@@ -681,8 +923,9 @@
             this.flTable.AutoScroll = true;
             this.flTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flTable.Location = new System.Drawing.Point(0, 0);
+            this.flTable.Margin = new System.Windows.Forms.Padding(2);
             this.flTable.Name = "flTable";
-            this.flTable.Size = new System.Drawing.Size(1549, 482);
+            this.flTable.Size = new System.Drawing.Size(812, 144);
             this.flTable.TabIndex = 3;
             // 
             // panel2
@@ -693,86 +936,31 @@
             this.panel2.Controls.Add(this.lbLoaiXe);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1549, 60);
+            this.panel2.Size = new System.Drawing.Size(812, 49);
             this.panel2.TabIndex = 0;
             // 
-            // lbLoaiXe
+            // btnTimKiem
             // 
-            this.lbLoaiXe.AutoSize = true;
-            this.lbLoaiXe.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLoaiXe.ForeColor = System.Drawing.Color.DimGray;
-            this.lbLoaiXe.Location = new System.Drawing.Point(25, 17);
-            this.lbLoaiXe.Name = "lbLoaiXe";
-            this.lbLoaiXe.Size = new System.Drawing.Size(42, 27);
-            this.lbLoaiXe.TabIndex = 0;
-            this.lbLoaiXe.Text = "XE";
-            // 
-            // pnContentHead
-            // 
-            this.pnContentHead.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnContentHead.Controls.Add(this.label1);
-            this.pnContentHead.FillColor = System.Drawing.Color.Red;
-            this.pnContentHead.FillColor2 = System.Drawing.Color.Fuchsia;
-            this.pnContentHead.Location = new System.Drawing.Point(35, 36);
-            this.pnContentHead.Name = "pnContentHead";
-            this.pnContentHead.Size = new System.Drawing.Size(1549, 81);
-            this.pnContentHead.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1543, 81);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "HỢP ĐỒNG CHO THUÊ XE";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // header
-            // 
-            this.header.BackColor = System.Drawing.Color.White;
-            this.header.Controls.Add(this.menuTripUserInfo);
-            this.header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.header.Location = new System.Drawing.Point(0, 0);
-            this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(1620, 62);
-            this.header.TabIndex = 0;
-            // 
-            // menuTripUserInfo
-            // 
-            this.menuTripUserInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.menuTripUserInfo.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuTripUserInfo.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuTripUserInfo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lbUserName,
-            this.aToolStripMenuItem});
-            this.menuTripUserInfo.Location = new System.Drawing.Point(1462, 16);
-            this.menuTripUserInfo.Name = "menuTripUserInfo";
-            this.menuTripUserInfo.Size = new System.Drawing.Size(149, 30);
-            this.menuTripUserInfo.TabIndex = 0;
-            this.menuTripUserInfo.Text = "menuStrip1";
-            // 
-            // lbUserName
-            // 
-            this.lbUserName.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnLogOut});
-            this.lbUserName.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUserName.Name = "lbUserName";
-            this.lbUserName.Size = new System.Drawing.Size(105, 26);
-            this.lbUserName.Text = "Đại Cương";
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(165, 26);
-            this.btnLogOut.Text = "Đăng xuất";
+            this.btnTimKiem.BorderRadius = 4;
+            this.btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTimKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTimKiem.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTimKiem.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.Location = new System.Drawing.Point(660, 10);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(135, 29);
+            this.btnTimKiem.TabIndex = 2;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -788,252 +976,111 @@
             this.txtTimKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimKiem.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimKiem.Location = new System.Drawing.Point(713, 12);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTimKiem.Location = new System.Drawing.Point(185, 10);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Padding = new System.Windows.Forms.Padding(12, 5, 5, 5);
+            this.txtTimKiem.Padding = new System.Windows.Forms.Padding(9, 4, 4, 4);
             this.txtTimKiem.PasswordChar = '\0';
             this.txtTimKiem.PlaceholderText = "Tìm kiếm theo tên, hãng, mẫu xe";
             this.txtTimKiem.SelectedText = "";
-            this.txtTimKiem.Size = new System.Drawing.Size(611, 36);
+            this.txtTimKiem.Size = new System.Drawing.Size(458, 29);
             this.txtTimKiem.TabIndex = 1;
             // 
-            // btnTimKiem
+            // lbLoaiXe
             // 
-            this.btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lbLoaiXe.AutoSize = true;
+            this.lbLoaiXe.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLoaiXe.ForeColor = System.Drawing.Color.DimGray;
+            this.lbLoaiXe.Location = new System.Drawing.Point(19, 14);
+            this.lbLoaiXe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbLoaiXe.Name = "lbLoaiXe";
+            this.lbLoaiXe.Size = new System.Drawing.Size(36, 22);
+            this.lbLoaiXe.TabIndex = 0;
+            this.lbLoaiXe.Text = "XE";
+            // 
+            // pnContentHead
+            // 
+            this.pnContentHead.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTimKiem.BorderRadius = 4;
-            this.btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTimKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTimKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTimKiem.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTimKiem.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Location = new System.Drawing.Point(1347, 12);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(180, 36);
-            this.btnTimKiem.TabIndex = 2;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            this.pnContentHead.Controls.Add(this.label1);
+            this.pnContentHead.FillColor = System.Drawing.Color.Red;
+            this.pnContentHead.FillColor2 = System.Drawing.Color.Fuchsia;
+            this.pnContentHead.Location = new System.Drawing.Point(26, 29);
+            this.pnContentHead.Margin = new System.Windows.Forms.Padding(2);
+            this.pnContentHead.Name = "pnContentHead";
+            this.pnContentHead.Size = new System.Drawing.Size(812, 66);
+            this.pnContentHead.TabIndex = 3;
             // 
-            // btnQLKhachHang
+            // label1
             // 
-            this.btnQLKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnQLKhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQLKhachHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnQLKhachHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnQLKhachHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnQLKhachHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnQLKhachHang.FillColor = System.Drawing.Color.Transparent;
-            this.btnQLKhachHang.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.btnQLKhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(163)))), ((int)(((byte)(183)))));
-            this.btnQLKhachHang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(39)))));
-            this.btnQLKhachHang.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnQLKhachHang.Image = global::QLThueXeOto.Properties.Resources.boxblack;
-            this.btnQLKhachHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnQLKhachHang.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnQLKhachHang.Location = new System.Drawing.Point(0, 369);
-            this.btnQLKhachHang.Name = "btnQLKhachHang";
-            this.btnQLKhachHang.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnQLKhachHang.Size = new System.Drawing.Size(294, 64);
-            this.btnQLKhachHang.TabIndex = 8;
-            this.btnQLKhachHang.Text = "QUẢN LÝ KHÁCH HÀNG";
-            this.btnQLKhachHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // btnQLLichTrinh
-            // 
-            this.btnQLLichTrinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnQLLichTrinh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQLLichTrinh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnQLLichTrinh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnQLLichTrinh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnQLLichTrinh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnQLLichTrinh.FillColor = System.Drawing.Color.Transparent;
-            this.btnQLLichTrinh.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.btnQLLichTrinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(163)))), ((int)(((byte)(183)))));
-            this.btnQLLichTrinh.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(39)))));
-            this.btnQLLichTrinh.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnQLLichTrinh.Image = global::QLThueXeOto.Properties.Resources.boxblack;
-            this.btnQLLichTrinh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnQLLichTrinh.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnQLLichTrinh.Location = new System.Drawing.Point(0, 299);
-            this.btnQLLichTrinh.Name = "btnQLLichTrinh";
-            this.btnQLLichTrinh.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnQLLichTrinh.Size = new System.Drawing.Size(294, 64);
-            this.btnQLLichTrinh.TabIndex = 7;
-            this.btnQLLichTrinh.Text = "QUẢN LÝ LỊCH TRÌNH";
-            this.btnQLLichTrinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // btnThongKe
-            // 
-            this.btnThongKe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThongKe.BackColor = System.Drawing.Color.Transparent;
-            this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThongKe.FillColor = System.Drawing.Color.Transparent;
-            this.btnThongKe.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.btnThongKe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(163)))), ((int)(((byte)(183)))));
-            this.btnThongKe.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(39)))));
-            this.btnThongKe.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnThongKe.Image = global::QLThueXeOto.Properties.Resources.boxblack;
-            this.btnThongKe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnThongKe.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnThongKe.Location = new System.Drawing.Point(-1, 3);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.PressedColor = System.Drawing.Color.Transparent;
-            this.btnThongKe.Size = new System.Drawing.Size(298, 64);
-            this.btnThongKe.TabIndex = 5;
-            this.btnThongKe.Text = "THỐNG KÊ             VV";
-            this.btnThongKe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(4, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(807, 66);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "HỢP ĐỒNG CHO THUÊ XE";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2Button5
+            // header
             // 
-            this.guna2Button5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.guna2Button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(163)))), ((int)(((byte)(183)))));
-            this.guna2Button5.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(39)))));
-            this.guna2Button5.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.Image = global::QLThueXeOto.Properties.Resources.cicler;
-            this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button5.ImageSize = new System.Drawing.Size(10, 10);
-            this.guna2Button5.Location = new System.Drawing.Point(0, 72);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.guna2Button5.Size = new System.Drawing.Size(294, 64);
-            this.guna2Button5.TabIndex = 7;
-            this.guna2Button5.Text = "KHÁCH HÀNG";
-            this.guna2Button5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.header.BackColor = System.Drawing.Color.White;
+            this.header.Controls.Add(this.menuTripUserInfo);
+            this.header.Dock = System.Windows.Forms.DockStyle.Top;
+            this.header.Location = new System.Drawing.Point(0, 0);
+            this.header.Margin = new System.Windows.Forms.Padding(2);
+            this.header.Name = "header";
+            this.header.Size = new System.Drawing.Size(865, 50);
+            this.header.TabIndex = 0;
             // 
-            // guna2Button4
+            // menuTripUserInfo
             // 
-            this.guna2Button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.guna2Button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(163)))), ((int)(((byte)(183)))));
-            this.guna2Button4.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(39)))));
-            this.guna2Button4.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Image = global::QLThueXeOto.Properties.Resources.cicler;
-            this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button4.ImageSize = new System.Drawing.Size(10, 10);
-            this.guna2Button4.Location = new System.Drawing.Point(0, 3);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.guna2Button4.Size = new System.Drawing.Size(296, 64);
-            this.guna2Button4.TabIndex = 6;
-            this.guna2Button4.Text = "DOANH THU";
-            this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.menuTripUserInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.menuTripUserInfo.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuTripUserInfo.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuTripUserInfo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lbUserName,
+            this.aToolStripMenuItem});
+            this.menuTripUserInfo.Location = new System.Drawing.Point(732, 13);
+            this.menuTripUserInfo.Name = "menuTripUserInfo";
+            this.menuTripUserInfo.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuTripUserInfo.Size = new System.Drawing.Size(126, 28);
+            this.menuTripUserInfo.TabIndex = 0;
+            this.menuTripUserInfo.Text = "menuStrip1";
             // 
-            // btnQLDonDatXe
+            // lbUserName
             // 
-            this.btnQLDonDatXe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnQLDonDatXe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQLDonDatXe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnQLDonDatXe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnQLDonDatXe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnQLDonDatXe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnQLDonDatXe.FillColor = System.Drawing.Color.Transparent;
-            this.btnQLDonDatXe.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.btnQLDonDatXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(163)))), ((int)(((byte)(183)))));
-            this.btnQLDonDatXe.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(39)))));
-            this.btnQLDonDatXe.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnQLDonDatXe.Image = global::QLThueXeOto.Properties.Resources.boxblack;
-            this.btnQLDonDatXe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnQLDonDatXe.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnQLDonDatXe.Location = new System.Drawing.Point(0, 229);
-            this.btnQLDonDatXe.Name = "btnQLDonDatXe";
-            this.btnQLDonDatXe.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnQLDonDatXe.Size = new System.Drawing.Size(294, 64);
-            this.btnQLDonDatXe.TabIndex = 4;
-            this.btnQLDonDatXe.Text = "QUẢN LÝ ĐƠN ĐẶT XE";
-            this.btnQLDonDatXe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.lbUserName.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnLogOut});
+            this.lbUserName.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUserName.Name = "lbUserName";
+            this.lbUserName.Size = new System.Drawing.Size(88, 24);
+            this.lbUserName.Text = "Đại Cương";
             // 
-            // btnQLOto
+            // btnLogOut
             // 
-            this.btnQLOto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnQLOto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQLOto.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnQLOto.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnQLOto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnQLOto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnQLOto.FillColor = System.Drawing.Color.Transparent;
-            this.btnQLOto.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.btnQLOto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(163)))), ((int)(((byte)(183)))));
-            this.btnQLOto.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(39)))));
-            this.btnQLOto.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnQLOto.Image = global::QLThueXeOto.Properties.Resources.boxblack;
-            this.btnQLOto.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnQLOto.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnQLOto.Location = new System.Drawing.Point(0, 159);
-            this.btnQLOto.Name = "btnQLOto";
-            this.btnQLOto.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnQLOto.Size = new System.Drawing.Size(294, 64);
-            this.btnQLOto.TabIndex = 3;
-            this.btnQLOto.Text = "QUẢN LÝ OTO";
-            this.btnQLOto.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // btnChoThue
-            // 
-            this.btnChoThue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnChoThue.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChoThue.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnChoThue.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnChoThue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnChoThue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnChoThue.FillColor = System.Drawing.Color.DimGray;
-            this.btnChoThue.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.btnChoThue.ForeColor = System.Drawing.Color.White;
-            this.btnChoThue.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(39)))));
-            this.btnChoThue.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnChoThue.Image = global::QLThueXeOto.Properties.Resources.boxblack;
-            this.btnChoThue.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnChoThue.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnChoThue.Location = new System.Drawing.Point(0, 89);
-            this.btnChoThue.Name = "btnChoThue";
-            this.btnChoThue.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnChoThue.Size = new System.Drawing.Size(294, 64);
-            this.btnChoThue.TabIndex = 1;
-            this.btnChoThue.Text = "HỢP ĐỒNG CHO THUÊ";
-            this.btnChoThue.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(138, 22);
+            this.btnLogOut.Text = "Đăng xuất";
             // 
             // aToolStripMenuItem
             // 
             this.aToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.aToolStripMenuItem.Image = global::QLThueXeOto.Properties.Resources.user;
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(34, 26);
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(32, 24);
             // 
             // ThueXefrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.ClientSize = new System.Drawing.Size(1028, 609);
             this.Controls.Add(this.scLayer);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ThueXefrm";
             this.Text = "Hợp đồng thuê xe";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
