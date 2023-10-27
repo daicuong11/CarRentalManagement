@@ -16,7 +16,7 @@ namespace QLThueXeOto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DangNhapfrm());
+            Application.Run(new QuanLyKhachHangfrm());
         }
     }
 }

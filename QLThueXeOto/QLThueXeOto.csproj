@@ -60,6 +60,7 @@
     <Compile Include="BLL\HomeBLL.cs" />
     <Compile Include="BLL\HopDongThueXeBLL.cs" />
     <Compile Include="BLL\QuanLyDonDatXeBLL.cs" />
+    <Compile Include="BLL\KhachHangBLL.cs" />
     <Compile Include="BLL\ThueXeBLL.cs" />
     <Compile Include="ChiTietDonDatfrm.cs">
       <SubType>Form</SubType>
@@ -226,6 +227,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Car2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

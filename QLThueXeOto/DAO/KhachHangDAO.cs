@@ -26,6 +26,20 @@ namespace QLThueXeOto.DAO
             int id = (int) DataProvider.Instance.ExecuteScalar(query, new object[] { kh.SoDienThoai });
             return id;
         }
+        public bool Update_KhachHang(KhachHang kh)
+        {
+
+            string query = "UPDATE khachhang SET hoTen = @hoTen , soDienThoai = @soDienThoai , diaChi = @diaChi WHERE khachHangId = @khachHangId ";
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { kh.HoTen, kh.SoDienThoai, kh.DiaChi, kh.KhachHangHangId });
+            return (result > 0);
+        }
+        public bool Delete_KhachHang(int ma)
+        {
+            string query = "DELETE from khachhang WHERE khachHangId = @khachHangId ";
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] {ma});
+            return (result > 0);
+        }
+
 
         public int getKhachHangBySoDienThoai(string soDienThoai)
         {
@@ -45,6 +59,11 @@ namespace QLThueXeOto.DAO
                 return new KhachHang(tb.Rows[0]);
             }
             return null;
+        }
+        public DataTable getAllKhachHang()
+        {
+            
+            return DataProvider.Instance.ExecuteQuery("select * from khachhang");
         }
     }
 }

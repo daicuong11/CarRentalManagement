@@ -1,6 +1,9 @@
-﻿using QLThueXeOto.DAO;
+﻿using QLThueXeOto.BLL;
+using QLThueXeOto.DAO;
+using QLThueXeOto.DTO;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -8,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace QLThueXeOto
 {
@@ -61,11 +65,20 @@ namespace QLThueXeOto
 
         private void QuanLyKhachHangfrm_Load(object sender, EventArgs e)
         {
-            scLayer.SplitterDistance = maxWithSightBar;
-            this.SizeChanged += Homefrm_SizeChanged;
-            lbUserName.Text = "Hi, " + AuthDAO.Instance.User.TenNguoiDung;
+            //scLayer.SplitterDistance = maxWithSightBar;
+            //this.SizeChanged += Homefrm_SizeChanged;
+            //lbUserName.Text = "Hi, " + AuthDAO.Instance.User.TenNguoiDung;
+            LoadKhachHangData();
         }
-
+        private void LoadKhachHangData()
+        {
+            lvKhachHang.Items.Clear();
+            foreach (KhachHang row in KhachHangBLL.Instance.ListKhachHang())
+            {
+                ListViewItem lvi = new ListViewItem(row.KhachHangHangId.ToString());
+                InsertListItem(row);
+            }
+        }
         private void btnHidenBar_Click(object sender, EventArgs e)
         {
 
@@ -103,6 +116,95 @@ namespace QLThueXeOto
             if (frm != null)
             {
                 frm.Show();
+            }
+        }
+
+        private void lvKhachHang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(lvKhachHang.SelectedItems.Count == 0)
+            {
+                return;
+            }
+           ListViewItem lvi = lvKhachHang.SelectedItems[0];
+            int ma =  Int32.Parse( lvi.Text);
+            Hienthichitiet(ma);
+        }
+        private void Hienthichitiet(int ma)
+        {
+            KhachHang kh = KhachHangDAO.Instance.getKhachHangById(ma);
+            textBox_ID.Text = kh.KhachHangHangId.ToString();
+            textBox_hovaten.Text = kh.HoTen;
+            textBox_sdt.Text = kh.SoDienThoai;
+            textBox_diachi.Text = kh.DiaChi;
+        }
+
+        private void btn_them_Click(object sender, EventArgs e)
+        {
+            KhachHang kh = new KhachHang();
+            kh.HoTen = textBox_hovaten.Text;
+            kh.SoDienThoai = textBox_sdt.Text;
+            kh.DiaChi = textBox_diachi.Text;
+            int check = KhachHangBLL.Instance.InsertKhachHang(kh);
+            if (check > 0)
+            {
+                kh.KhachHangHangId = check;
+                InsertListItem(kh);
+                ResetText();
+            }
+            else
+            {
+                MessageBox.Show("Thất bại");
+            }
+        }
+        public void InsertListItem(KhachHang kh)
+        {
+            ListViewItem lvi = new ListViewItem(kh.KhachHangHangId.ToString());
+            lvi.SubItems.Add(kh.HoTen);
+            lvi.SubItems.Add(kh.SoDienThoai);
+            lvi.SubItems.Add(kh.DiaChi);
+            lvKhachHang.Items.Add(lvi);
+        }
+        private void btn_luu_Click(object sender, EventArgs e)
+        {
+            String id = textBox_ID.Text;
+            KhachHang kh = new KhachHang();
+            kh.KhachHangHangId = Int32.Parse(id);
+            kh.HoTen = textBox_hovaten.Text;
+            kh.SoDienThoai = textBox_sdt.Text;
+            kh.DiaChi = textBox_diachi.Text;
+            if (KhachHangBLL.Instance.UpdateKhachHang(kh))
+            {
+                 LoadKhachHangData();
+
+            }
+            else
+            {
+                MessageBox.Show("Thất bại");
+            }
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            if(lvKhachHang.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Bạn chưa chọn khách hàng nào để xóa");
+            }
+            ListViewItem lvi = lvKhachHang.SelectedItems[0];
+            int ma = Int32.Parse(lvi.Text);
+            DialogResult ret = MessageBox.Show("Bạn có chắc xóa không", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (ret == DialogResult.Yes)
+            {
+                XoaKhachHang(ma);
+            }
+        }
+        private void XoaKhachHang (int ma)
+        {
+            if (KhachHangBLL.Instance.DeleteKhachHang(ma))
+            {
+                LoadKhachHangData();
+            } else
+            {
+                MessageBox.Show("Xóa thất bại");
             }
         }
     }
