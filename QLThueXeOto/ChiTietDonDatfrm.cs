@@ -37,7 +37,7 @@ namespace QLThueXeOto
         private void LoadKhachHang()
         {
             DonDatXe donDatXe = DonDatXeDAO.Instance.getDonDatXeById(donDatXeId);
-            KhachHang kh = KhachHangDAO.Instance.getKhachHangById(donDatXe.KhachHangId);
+            KhachHang kh = KhachHangDAO.Instance.getKhachHangByIdAndDeleted(donDatXe.KhachHangId);
             if (kh != null)
             {
                 txtHoVaTen.Text = kh.HoTen;

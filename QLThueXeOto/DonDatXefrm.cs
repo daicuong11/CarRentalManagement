@@ -41,7 +41,7 @@ namespace QLThueXeOto
         private void LoadKhachHang()
         {
             int khId = DonDatXeDAO.Instance.KhachHangHienHanhId;
-            KhachHang kh = KhachHangDAO.Instance.getKhachHangById(khId);
+            KhachHang kh = KhachHangDAO.Instance.getKhachHangByIdAndDeleted(khId);
             if(kh != null)
             {
                 txtHoVaTen.Text = kh.HoTen;
@@ -83,7 +83,7 @@ namespace QLThueXeOto
             // Tính số ngày đặt bằng cách trừ ngày trả xe cho ngày thuê
             TimeSpan soNgayDat = ngayTra - ngayThue;
 
-            int soNgayDatInt = soNgayDat.Days;
+            int soNgayDatInt = soNgayDat.Days + 1;
             lblTongNgayDat.Text = "$/" + soNgayDatInt + " ngày.";
 
             txtTongTien.Text = (xeDuocChon.GiaChoThue * soNgayDatInt).ToString();
@@ -105,16 +105,6 @@ namespace QLThueXeOto
 
         #endregion
 
-        private void dtNgayThue_ValueChanged(object sender, EventArgs e)
-        {
-            Update_TongSoNgayThue();
-        }
-
-        private void dtNgayTra_ValueChanged(object sender, EventArgs e)
-        {
-            Update_TongSoNgayThue();
-        }
-
         private void btnDatXe_Click(object sender, EventArgs e)
         {
             KhachHang kh = this.getKhachHangFormInput();
@@ -123,7 +113,7 @@ namespace QLThueXeOto
             //save khachhang
             //check KhachHang đã tồn tại bằng số điện thoại
             khachHangId = KhachHangDAO.Instance.getKhachHangBySoDienThoai(kh.SoDienThoai);
-            if(khachHangId < 0)
+            if (khachHangId < 0)
             {
                 khachHangId = KhachHangDAO.Instance.Insert_KhachHang(kh);
             }
@@ -140,26 +130,31 @@ namespace QLThueXeOto
 
             // get số ngày thuê
             TimeSpan soNgayDat = ngayTra - ngayThue;
-            int soNgayThue = soNgayDat.Days;
+            int soNgayThue = soNgayDat.Days + 1;
 
             // get đơn giá thuê xe
             decimal donGia = xeDuocChon.GiaChoThue;
 
             //get tổng tiền
-            decimal tongTien =(decimal)(donGia * soNgayThue);
+            decimal tongTien = (decimal)(donGia * soNgayThue);
 
             // Kiểm tra thêm mới hay thêm xe
             int donDatXeHienHanhId = DonDatXeDAO.Instance.DonDatXeHienHanhId;
-            if(donDatXeHienHanhId < 0)
+            if (donDatXeHienHanhId < 0)
             {
                 //new mới đơn đặt xe
-                DonDatXe donDatXe = new DonDatXe( tongTien, khachHangId, nguoiDungId);
+                DonDatXe donDatXe = new DonDatXe(tongTien, khachHangId, nguoiDungId);
                 // insert đơn đặt xe
                 newDonDatXeId = DonDatXeDAO.Instance.Insert_DonDatXe(donDatXe);
+                // insert lịch trình
+                string diemDen = txtDiemDen.Text.ToString().Trim();
+                if (string.IsNullOrEmpty(diemDen)) diemDen = "Trống";
+
+                LichTrinhDAO.Instance.Insert_LichTrinh(diemDen, newDonDatXeId);
                 if (newDonDatXeId > 0)
                 {
                     //insert chi tiết đơn đặt
-                    CTDD newCTDD = new CTDD(xeId, newDonDatXeId, ngayThue, ngayTra , soNgayThue, donGia, tongTien);
+                    CTDD newCTDD = new CTDD(xeId, newDonDatXeId, ngayThue, ngayTra, soNgayThue, donGia, tongTien);
                     bool kq = CTDDDAO.Instance.Insert_CTDD(newCTDD);
                     //update trạng thái của xe
                     if (kq)
@@ -188,13 +183,13 @@ namespace QLThueXeOto
             }
             //get Tổng tiền
             decimal newTongTien = CTDDDAO.Instance.getTongTienByDonDatXeId(donDatXeHienHanhId);
-            
+
             bool result = DonDatXeDAO.Instance.Update_TongTien(newTongTien);
             if (result)
             {
-                MessageBox.Show("Đã cho thuê xe " + xeDuocChon.TenXe, "Thành công") ;
+                MessageBox.Show("Đã cho thuê xe " + xeDuocChon.TenXe, "Thành công");
                 DonDatXeDAO.Instance.setKH_ID_And_DDX_ID(-1, -1);
-                this.Close() ;
+                this.Close();
                 return;
             }
             else
@@ -203,7 +198,6 @@ namespace QLThueXeOto
                 this.Close();
                 return;
             }
-
         }
 
         private void btnThemXe_Click(object sender, EventArgs e)
@@ -231,7 +225,7 @@ namespace QLThueXeOto
 
             // get số ngày thuê
             TimeSpan soNgayDat = ngayTra - ngayThue;
-            int soNgayThue = soNgayDat.Days;
+            int soNgayThue = soNgayDat.Days + 1;
 
             // get đơn giá thuê xe
             decimal donGia = xeDuocChon.GiaChoThue;
@@ -244,13 +238,17 @@ namespace QLThueXeOto
             if (donDatXeHienHanhId < 0)
             {
                 //new mới đơn đặt xe
-                DonDatXe donDatXe = new DonDatXe( tongTien, khachHangId, nguoiDungId);
+                DonDatXe donDatXe = new DonDatXe(tongTien, khachHangId, nguoiDungId);
                 // insert đơn đặt xe
                 newDonDatXeId = DonDatXeDAO.Instance.Insert_DonDatXe(donDatXe);
+                //insert lịch trình
+                string diemDen = txtDiemDen.Text.ToString().Trim();
+                if (string.IsNullOrEmpty(diemDen)) diemDen = "Trống";
+                LichTrinhDAO.Instance.Insert_LichTrinh(diemDen, newDonDatXeId);
                 if (newDonDatXeId > 0)
                 {
                     //insert chi tiết đơn đặt
-                    CTDD newCTDD = new CTDD(xeId, newDonDatXeId,ngayThue, ngayTra, soNgayThue, donGia, tongTien);
+                    CTDD newCTDD = new CTDD(xeId, newDonDatXeId, ngayThue, ngayTra, soNgayThue, donGia, tongTien);
                     bool kq = CTDDDAO.Instance.Insert_CTDD(newCTDD);
                     //update trạng thái của xe
                     if (kq)
@@ -273,7 +271,7 @@ namespace QLThueXeOto
             }
 
             // Nếu thêm xe thì chỉ cần thêm ctdd với xe mới và đơn đặt xe hiện hành
-            CTDD ctdd = new CTDD(xeId, donDatXeHienHanhId,ngayThue, ngayTra, soNgayThue, donGia, tongTien);
+            CTDD ctdd = new CTDD(xeId, donDatXeHienHanhId, ngayThue, ngayTra, soNgayThue, donGia, tongTien);
             bool temp = CTDDDAO.Instance.Insert_CTDD(ctdd);
             //update trạng thái của xe
             if (temp)
@@ -296,6 +294,16 @@ namespace QLThueXeOto
                 this.Close();
                 return;
             }
+        }
+
+        private void dtNgayThue_ValueChanged_1(object sender, EventArgs e)
+        {
+            Update_TongSoNgayThue();
+        }
+
+        private void dtNgayTra_ValueChanged_1(object sender, EventArgs e)
+        {
+            Update_TongSoNgayThue();
         }
     }
 }

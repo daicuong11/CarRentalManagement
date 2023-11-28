@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.scLayer = new System.Windows.Forms.SplitContainer();
             this.btnQLKhachHang = new Guna.UI2.WinForms.Guna2Button();
             this.btnQLLichTrinh = new Guna.UI2.WinForms.Guna2Button();
@@ -45,10 +49,8 @@
             this.body = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.flTable = new System.Windows.Forms.FlowLayoutPanel();
+            this.dgvLichTrinh = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbLoaiXe = new System.Windows.Forms.Label();
             this.pnContentHead = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -71,8 +73,8 @@
             this.body.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLichTrinh)).BeginInit();
             this.panel2.SuspendLayout();
             this.pnContentHead.SuspendLayout();
             this.header.SuspendLayout();
@@ -129,6 +131,7 @@
             this.btnQLKhachHang.TabIndex = 8;
             this.btnQLKhachHang.Text = "QUẢN LÝ KHÁCH HÀNG";
             this.btnQLKhachHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnQLKhachHang.Click += new System.EventHandler(this.btnQLKhachHang_Click);
             // 
             // btnQLLichTrinh
             // 
@@ -288,6 +291,7 @@
             this.btnQLDonDatXe.TabIndex = 4;
             this.btnQLDonDatXe.Text = "QUẢN LÝ ĐƠN ĐẶT XE";
             this.btnQLDonDatXe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnQLDonDatXe.Click += new System.EventHandler(this.btnQLDonDatXe_Click);
             // 
             // btnQLOto
             // 
@@ -313,6 +317,7 @@
             this.btnQLOto.TabIndex = 3;
             this.btnQLOto.Text = "QUẢN LÝ OTO";
             this.btnQLOto.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnQLOto.Click += new System.EventHandler(this.btnQLOto_Click);
             // 
             // panel1
             // 
@@ -384,6 +389,7 @@
             this.btnChoThue.TabIndex = 1;
             this.btnChoThue.Text = "HỢP ĐỒNG CHO THUÊ";
             this.btnChoThue.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnChoThue.Click += new System.EventHandler(this.btnChoThue_Click);
             // 
             // body
             // 
@@ -413,7 +419,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.Silver;
             this.guna2GradientPanel1.BorderRadius = 4;
-            this.guna2GradientPanel1.Controls.Add(this.panel4);
             this.guna2GradientPanel1.Controls.Add(this.panel3);
             this.guna2GradientPanel1.Controls.Add(this.panel2);
             this.guna2GradientPanel1.Location = new System.Drawing.Point(35, 150);
@@ -421,44 +426,88 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1545, 808);
             this.guna2GradientPanel1.TabIndex = 4;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 634);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1545, 174);
-            this.panel4.TabIndex = 2;
-            // 
-            // panel6
-            // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1545, 174);
-            this.panel6.TabIndex = 3;
-            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.flTable);
+            this.panel3.Controls.Add(this.dgvLichTrinh);
             this.panel3.Location = new System.Drawing.Point(0, 63);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1545, 565);
+            this.panel3.Size = new System.Drawing.Size(1545, 745);
             this.panel3.TabIndex = 1;
             // 
-            // flTable
+            // dgvLichTrinh
             // 
-            this.flTable.AutoScroll = true;
-            this.flTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flTable.Location = new System.Drawing.Point(0, 0);
-            this.flTable.Name = "flTable";
-            this.flTable.Size = new System.Drawing.Size(1545, 565);
-            this.flTable.TabIndex = 3;
+            this.dgvLichTrinh.AllowUserToAddRows = false;
+            this.dgvLichTrinh.AllowUserToDeleteRows = false;
+            this.dgvLichTrinh.AllowUserToOrderColumns = true;
+            this.dgvLichTrinh.AllowUserToResizeColumns = false;
+            this.dgvLichTrinh.AllowUserToResizeRows = false;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.dgvLichTrinh.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLichTrinh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.dgvLichTrinh.ColumnHeadersHeight = 42;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLichTrinh.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dgvLichTrinh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvLichTrinh.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvLichTrinh.Location = new System.Drawing.Point(0, 0);
+            this.dgvLichTrinh.Name = "dgvLichTrinh";
+            this.dgvLichTrinh.ReadOnly = true;
+            this.dgvLichTrinh.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLichTrinh.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.dgvLichTrinh.RowHeadersVisible = false;
+            this.dgvLichTrinh.RowHeadersWidth = 51;
+            this.dgvLichTrinh.RowTemplate.Height = 32;
+            this.dgvLichTrinh.RowTemplate.ReadOnly = true;
+            this.dgvLichTrinh.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLichTrinh.Size = new System.Drawing.Size(1545, 745);
+            this.dgvLichTrinh.TabIndex = 2;
+            this.dgvLichTrinh.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvLichTrinh.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvLichTrinh.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvLichTrinh.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvLichTrinh.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvLichTrinh.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvLichTrinh.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvLichTrinh.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvLichTrinh.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvLichTrinh.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvLichTrinh.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvLichTrinh.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvLichTrinh.ThemeStyle.HeaderStyle.Height = 42;
+            this.dgvLichTrinh.ThemeStyle.ReadOnly = true;
+            this.dgvLichTrinh.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvLichTrinh.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvLichTrinh.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvLichTrinh.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvLichTrinh.ThemeStyle.RowsStyle.Height = 32;
+            this.dgvLichTrinh.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvLichTrinh.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvLichTrinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLichTrinh_CellClick);
             // 
             // panel2
             // 
@@ -580,8 +629,8 @@
             this.body.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2GradientPanel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLichTrinh)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.pnContentHead.ResumeLayout(false);
@@ -617,13 +666,11 @@
         private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.FlowLayoutPanel flTable;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbLoaiXe;
         private Guna.UI2.WinForms.Guna2GradientPanel pnContentHead;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvLichTrinh;
     }
 }

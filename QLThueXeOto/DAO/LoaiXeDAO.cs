@@ -1,4 +1,5 @@
 ﻿using QLThueXeOto.BLL;
+using QLThueXeOto.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -38,6 +39,16 @@ namespace QLThueXeOto.DAO
         {
             string query = "select * from loaixe where tenLoaiXe like N'%" + kieuDang + "%' and soChoNgoi = @soChoNgoi";
             return DataProvider.Instance.ExecuteQuery(query, new object[] {soChoNgoi});
+        }
+
+        public LoaiXe getLoaiXeById(int id)
+        {
+            DataTable tb = DataProvider.Instance.ExecuteQuery("select * from loaixe where loaiXeId = @id ", new object[] { id });
+            if(tb.Rows.Count > 0)
+            {
+                return new LoaiXe(tb.Rows[0]);
+            }
+            return null;
         }
     }
 }

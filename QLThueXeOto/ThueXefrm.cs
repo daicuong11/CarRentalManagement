@@ -50,6 +50,13 @@ namespace QLThueXeOto
             this.SizeChanged += Homefrm_SizeChanged;
             lbUserName.Text = "Hi, " + AuthDAO.Instance.User.TenNguoiDung;
             LoadXeInTable(ThueXeBLL.Instance.ListXeByLoaiXeId(this.loaiXeId));
+            LoadTitle();
+        }
+
+        private void LoadTitle()
+        {
+            LoaiXe lx = LoaiXeDAO.Instance.getLoaiXeById(loaiXeId);
+            lbXe.Text = "XE(" + lx.TenLoaiXe + ")";
         }
 
         #region
@@ -136,30 +143,6 @@ namespace QLThueXeOto
             }
         }
         #endregion
-
-        private void btnThongKe_Click(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(btnThongKe.Text))
-            {
-                changeSightBar();
-                scItemThongKe.Height = (heightItem * 3);
-                scItemThongKe.Panel2Collapsed = !scItemThongKe.Panel2Collapsed;
-            }
-            else
-            {
-                if (scItemThongKe.Height < 66)
-                {
-                    scItemThongKe.Height = (heightItem * 3);
-                    btnThongKe.Text = "THỐNG KÊ             VV";
-                }
-                else
-                {
-                    scItemThongKe.Height = heightItem;
-                    btnThongKe.Text = "THỐNG KÊ             >>";
-                }
-                scItemThongKe.Panel2Collapsed = !scItemThongKe.Panel2Collapsed;
-            }
-        }
 
         private void ThueXefrm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -394,6 +377,71 @@ namespace QLThueXeOto
             {
                 LoadXeInTable(ThueXeBLL.Instance.ListXeByTuKhoaTimKiem(this.loaiXeId, tuKhoaTimKiem));
             }
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            string tuKhoaTimKiem = txtTimKiem.Text.Trim();
+            if (String.IsNullOrEmpty(tuKhoaTimKiem))
+            {
+                LoadXeInTable(ThueXeBLL.Instance.ListXeByLoaiXeId(this.loaiXeId));
+            }
+            else
+            {
+                LoadXeInTable(ThueXeBLL.Instance.ListXeByTuKhoaTimKiem(this.loaiXeId, tuKhoaTimKiem));
+            }
+        }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(btnThongKe.Text))
+            {
+                changeSightBar();
+                scItemThongKe.Height = (heightItem * 3);
+                scItemThongKe.Panel2Collapsed = !scItemThongKe.Panel2Collapsed;
+            }
+            else
+            {
+                if (scItemThongKe.Height < 66)
+                {
+                    scItemThongKe.Height = (heightItem * 3);
+                    btnThongKe.Text = "THỐNG KÊ             VV";
+                }
+                else
+                {
+                    scItemThongKe.Height = heightItem;
+                    btnThongKe.Text = "THỐNG KÊ             >>";
+                }
+                scItemThongKe.Panel2Collapsed = !scItemThongKe.Panel2Collapsed;
+            }
+        }
+
+        private void btnQLOto_Click(object sender, EventArgs e)
+        {
+            QuanLyOtofrm frm = new QuanLyOtofrm();
+            this.Close();
+            frm.Show();
+        }
+
+        private void btnQLDonDatXe_Click(object sender, EventArgs e)
+        {
+            QuanLyDonDatXefrm frm = new QuanLyDonDatXefrm();
+            this.Close();
+            frm.Show();
+        }
+
+        private void btnQLLichTrinh_Click(object sender, EventArgs e)
+        {
+            QuanLyLichTrinhfrm frm = new QuanLyLichTrinhfrm();
+            this.Close();
+            frm.Show();
+        }
+
+        private void btnQLKhachHang_Click(object sender, EventArgs e)
+        {
+            QuanLyKhachHangfrm frm = new QuanLyKhachHangfrm();
+            this.Close();
+            frm.Show();
         }
     }
 }

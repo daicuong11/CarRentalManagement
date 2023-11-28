@@ -23,7 +23,7 @@ namespace QLThueXeOto.DAO
 
         }
 
-        private String strCnn = ConfigurationManager.ConnectionStrings["QLTX_KH"].ConnectionString;
+        private String strCnn = ConfigurationManager.ConnectionStrings["qltx"].ConnectionString;
 
         public DataTable ExecuteQuery(string strQuerry, object[] parameter = null)
         {

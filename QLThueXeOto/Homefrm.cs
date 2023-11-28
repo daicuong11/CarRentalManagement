@@ -132,5 +132,6 @@ namespace QLThueXeOto
                 scItemThongKe.Panel2Collapsed = !scItemThongKe.Panel2Collapsed;
             }
         }
+
     }
 }

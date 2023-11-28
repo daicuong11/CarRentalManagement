@@ -66,5 +66,13 @@ namespace QLThueXeOto.DAO
         {
             return DataProvider.Instance.ExecuteQuery("select * from dondatxe");
         }
+
+
+        public bool Update_TongTienByDonDatXeId(decimal tongTien, int donDatXeId)
+        {
+            string query = "UPDATE dondatxe SET tongGia = @tongTien WHERE donDatXeId = @dondatxeId ";
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { tongTien, donDatXeId });
+            return (result > 0);
+        }
     }
 }

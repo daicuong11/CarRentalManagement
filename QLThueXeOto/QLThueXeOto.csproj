@@ -33,15 +33,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EPPlus, Version=7.0.0.3, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.7.0.0\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=6.1.1.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.Interfaces.6.1.1\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.System.Drawing.6.1.1\lib\net462\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.5\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -73,8 +92,10 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\DonDatXeDAO.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\LichTrinhDAO.cs" />
     <Compile Include="DAO\LoaiXeDAO.cs" />
     <Compile Include="DAO\NguoiDungDAO.cs" />
+    <Compile Include="DAO\QuanLyThanhToanDAO.cs" />
     <Compile Include="DAO\XeDAO.cs" />
     <Compile Include="DonDatXefrm.cs">
       <SubType>Form</SubType>
@@ -85,6 +106,7 @@
     <Compile Include="DTO\CTDD.cs" />
     <Compile Include="DTO\DonDatXe.cs" />
     <Compile Include="DTO\KhachHang.cs" />
+    <Compile Include="DTO\LichTrinh.cs" />
     <Compile Include="DTO\LoaiXe.cs" />
     <Compile Include="DTO\NguoiDung.cs" />
     <Compile Include="DangNhapfrm.cs">
@@ -93,6 +115,7 @@
     <Compile Include="DangNhapfrm.Designer.cs">
       <DependentUpon>DangNhapfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DTO\QuanLyThanhToan.cs" />
     <Compile Include="DTO\Xe.cs" />
     <Compile Include="Homefrm.cs">
       <SubType>Form</SubType>
@@ -105,6 +128,12 @@
     </Compile>
     <Compile Include="HopDongThueXefrm.Designer.cs">
       <DependentUpon>HopDongThueXefrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelUpdateDonDatXefrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModelUpdateDonDatXefrm.Designer.cs">
+      <DependentUpon>ModelUpdateDonDatXefrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -132,6 +161,12 @@
     <Compile Include="QuanLyOtofrm.Designer.cs">
       <DependentUpon>QuanLyOtofrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThanhToanfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThanhToanfrm.Designer.cs">
+      <DependentUpon>ThanhToanfrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThueXefrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HopDongThueXefrm.resx">
       <DependentUpon>HopDongThueXefrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModelUpdateDonDatXefrm.resx">
+      <DependentUpon>ModelUpdateDonDatXefrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -175,6 +213,9 @@
     <EmbeddedResource Include="QuanLyOtofrm.resx">
       <DependentUpon>QuanLyOtofrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThanhToanfrm.resx">
+      <DependentUpon>ThanhToanfrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThueXefrm.resx">
       <DependentUpon>ThueXefrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +234,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Enums\" />
     <Folder Include="img\" />
   </ItemGroup>
   <ItemGroup>

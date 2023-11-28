@@ -247,5 +247,32 @@ namespace QLThueXeOto
 
         }
 
+        private void btnQLOto_Click(object sender, EventArgs e)
+        {
+            QuanLyOtofrm frm = new QuanLyOtofrm();
+            this.Close();
+            frm.Show();
+        }
+
+        private void btnQLDonDatXe_Click(object sender, EventArgs e)
+        {
+            QuanLyDonDatXefrm frm = new QuanLyDonDatXefrm();
+            this.Close();
+            frm.Show();
+        }
+
+        private void btnQLLichTrinh_Click(object sender, EventArgs e)
+        {
+            QuanLyLichTrinhfrm frm = new QuanLyLichTrinhfrm();
+            this.Close();
+            frm.Show();
+        }
+
+        private void btnQLKhachHang_Click(object sender, EventArgs e)
+        {
+            QuanLyKhachHangfrm frm = new QuanLyKhachHangfrm();
+            this.Close();
+            frm.Show();
+        }
     }
 }

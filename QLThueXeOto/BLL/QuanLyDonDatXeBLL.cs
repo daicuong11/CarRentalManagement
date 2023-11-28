@@ -33,7 +33,7 @@ namespace QLThueXeOto.BLL
             {
                 DonDatXe donDatXe = new DonDatXe(dr);
                 NguoiDung nguoiDung = NguoiDungDAO.Instance.getNguoiDungById(donDatXe.NguoiDungId);
-                KhachHang khachHang = KhachHangDAO.Instance.getKhachHangById(donDatXe.KhachHangId);
+                KhachHang khachHang = KhachHangDAO.Instance.getKhachHangByIdAndDeleted(donDatXe.KhachHangId);
                 DataRow newRow = tb.NewRow();
                 newRow["ID"] = donDatXe.DonDatXeId;
                 newRow["Khách hàng"] = khachHang.HoTen;

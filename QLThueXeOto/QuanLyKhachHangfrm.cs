@@ -1,4 +1,6 @@
-﻿using QLThueXeOto.BLL;
+﻿using OfficeOpenXml.Style;
+using OfficeOpenXml;
+using QLThueXeOto.BLL;
 using QLThueXeOto.DAO;
 using QLThueXeOto.DTO;
 using System;
@@ -7,6 +9,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -65,9 +68,9 @@ namespace QLThueXeOto
 
         private void QuanLyKhachHangfrm_Load(object sender, EventArgs e)
         {
-            //scLayer.SplitterDistance = maxWithSightBar;
-            //this.SizeChanged += Homefrm_SizeChanged;
-            //lbUserName.Text = "Hi, " + AuthDAO.Instance.User.TenNguoiDung;
+            scLayer.SplitterDistance = maxWithSightBar;
+            this.SizeChanged += Homefrm_SizeChanged;
+            lbUserName.Text = "Hi, " + AuthDAO.Instance.User.TenNguoiDung;
             LoadKhachHangData();
         }
         private void LoadKhachHangData(string searchkey = "")
@@ -203,6 +206,7 @@ namespace QLThueXeOto
             if(lvKhachHang.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Bạn chưa chọn khách hàng nào để xóa");
+                return;
             }
             ListViewItem lvi = lvKhachHang.SelectedItems[0];
             int ma = Int32.Parse(lvi.Text);
@@ -227,6 +231,92 @@ namespace QLThueXeOto
         {
             string searchkey = txt_timkiem.Text.Trim();
             LoadKhachHangData(searchkey);
+        }
+
+        private void btnChoThue_Click(object sender, EventArgs e)
+        {
+            HopDongThueXefrm frm = new HopDongThueXefrm();
+            this.Close();
+            frm.Show();
+        }
+
+        private void btnQLOto_Click(object sender, EventArgs e)
+        {
+            QuanLyOtofrm frm = new QuanLyOtofrm();
+            this.Close();
+            frm.Show();
+        }
+
+        private void btnQLDonDatXe_Click(object sender, EventArgs e)
+        {
+            QuanLyDonDatXefrm frm = new QuanLyDonDatXefrm();
+            this.Close();
+            frm.Show();
+        }
+
+        private void btnQLLichTrinh_Click(object sender, EventArgs e)
+        {
+            QuanLyLichTrinhfrm frm = new QuanLyLichTrinhfrm();
+            this.Close();
+            frm.Show();
+        }
+
+        private void btn_in_Click(object sender, EventArgs e)
+        {
+            ExportToExcel(lvKhachHang);
+        }
+
+        //handle export to file excel
+        public void ExportToExcel(ListView listView)
+        {
+            using (ExcelPackage excelPackage = new ExcelPackage())
+            {
+                ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("Sheet1");
+
+                // Đổ dữ liệu từ ListView vào Excel
+                int rowIndex = 1;
+
+                // Thêm header
+                for (int i = 0; i < listView.Columns.Count; i++)
+                {
+                    worksheet.Cells[1, i + 1].Value = listView.Columns[i].Text;
+                    worksheet.Cells[1, i + 1].Style.Font.Bold = true;
+                    worksheet.Cells[1, i + 1].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    worksheet.Cells[1, i + 1].Style.Fill.BackgroundColor.SetColor(Color.LightGray);
+                }
+
+                // Thêm dữ liệu
+                foreach (ListViewItem item in listView.Items)
+                {
+                    rowIndex++;
+
+                    for (int i = 0; i < item.SubItems.Count; i++)
+                    {
+                        worksheet.Cells[rowIndex, i + 1].Value = item.SubItems[i].Text;
+                    }
+                }
+
+                // Tự động căn chỉnh kích thước của cột dựa trên nội dung
+                worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
+
+                // Mở cửa sổ SaveFileDialog để chọn nơi lưu trữ file Excel
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Excel Files|*.xlsx|All Files|*.*";
+                saveFileDialog.Title = "Save Excel File";
+
+                // Đặt tên mặc định cho file là "DanhSachKhachHang"
+                saveFileDialog.FileName = "DanhSachKhachHang";
+
+                saveFileDialog.ShowDialog();
+
+                // Lưu file Excel
+                if (saveFileDialog.FileName != "")
+                {
+                    FileInfo excelFile = new FileInfo(saveFileDialog.FileName);
+                    excelPackage.SaveAs(excelFile);
+                    MessageBox.Show("File Excel đã được xuất thành công!");
+                }
+            }
         }
     }
 }

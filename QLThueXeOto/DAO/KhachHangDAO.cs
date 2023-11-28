@@ -35,7 +35,7 @@ namespace QLThueXeOto.DAO
         }
         public bool Delete_KhachHang(int ma)
         {
-            string query = "DELETE from khachhang WHERE khachHangId = @khachHangId ";
+            string query = "Update khachhang set daXoa = 1 where khachHangId = @ma ";
             int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] {ma});
             return (result > 0);
         }
@@ -43,7 +43,7 @@ namespace QLThueXeOto.DAO
 
         public int getKhachHangBySoDienThoai(string soDienThoai)
         {
-            DataTable tb = DataProvider.Instance.ExecuteQuery("SELECT khachHangId FROM khachhang WHERE soDienThoai = @SoDienThoai ", new object[] { soDienThoai });
+            DataTable tb = DataProvider.Instance.ExecuteQuery("SELECT khachHangId FROM khachhang WHERE soDienThoai = @SoDienThoai  and daXoa = 0", new object[] { soDienThoai });
             if(tb.Rows.Count > 0)
             {
                 return (int)tb.Rows[0]["khachHangId"];
@@ -53,8 +53,18 @@ namespace QLThueXeOto.DAO
 
         public KhachHang getKhachHangById(int id)
         {
-            DataTable tb = DataProvider.Instance.ExecuteQuery("select * from khachhang where khachHangId = @khid ", new object[] { id });
+            DataTable tb = DataProvider.Instance.ExecuteQuery("select * from khachhang where khachHangId = @khid and daXoa = 0", new object[] { id });
             if( tb.Rows.Count > 0)
+            {
+                return new KhachHang(tb.Rows[0]);
+            }
+            return null;
+        }
+
+        public KhachHang getKhachHangByIdAndDeleted(int id)
+        {
+            DataTable tb = DataProvider.Instance.ExecuteQuery("select * from khachhang where khachHangId = @khid", new object[] { id });
+            if (tb.Rows.Count > 0)
             {
                 return new KhachHang(tb.Rows[0]);
             }
@@ -63,11 +73,11 @@ namespace QLThueXeOto.DAO
         public DataTable getAllKhachHang()
         {
             
-            return DataProvider.Instance.ExecuteQuery("select * from khachhang");
+            return DataProvider.Instance.ExecuteQuery("select * from khachhang and daXoa = 0");
         }
         public DataTable getKhachHangByTuKhoaTimKiem(string tuKhoaTimKiem)
         {
-            string query = "select * from khachhang where (hoTen like N'%"
+            string query = "select * from khachhang where daXoa = 0 and (hoTen like N'%"
                 + tuKhoaTimKiem + "%' or soDienThoai like '%"
                 + tuKhoaTimKiem + "%' or diaChi like N'%"
                 + tuKhoaTimKiem + "%')";

@@ -23,6 +23,31 @@ namespace QLThueXeOto.DTO
         {
         }
 
+        public Xe(string tenXe, string hangXe, string mauXe, string bienSoXe, string trangThaiXe, string loaiNhienLieu, decimal giaChoThue, int loaiXeId)
+        {
+            this.tenXe = tenXe;
+            this.hangXe = hangXe;
+            this.mauXe = mauXe;
+            this.bienSoXe = bienSoXe;
+            this.trangThaiXe = trangThaiXe;
+            this.loaiNhienLieu = loaiNhienLieu;
+            this.giaChoThue = giaChoThue;
+            this.loaiXeId = loaiXeId;
+        }
+
+        public Xe(int xeId, string tenXe, string hangXe, string mauXe, string bienSoXe, string trangThaiXe, string loaiNhienLieu, decimal giaChoThue, int loaiXeId)
+        {
+            this.xeId = xeId;
+            this.tenXe = tenXe;
+            this.hangXe = hangXe;
+            this.mauXe = mauXe;
+            this.bienSoXe = bienSoXe;
+            this.trangThaiXe = trangThaiXe;
+            this.loaiNhienLieu = loaiNhienLieu;
+            this.giaChoThue = giaChoThue;
+            this.loaiXeId = loaiXeId;
+        }
+
         public Xe(DataRow row)
         {
             this.xeId = (int)row["xeId"];

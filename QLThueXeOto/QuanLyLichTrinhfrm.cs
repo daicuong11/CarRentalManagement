@@ -1,4 +1,5 @@
 ﻿using QLThueXeOto.DAO;
+using QLThueXeOto.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -63,10 +64,16 @@ namespace QLThueXeOto
             scLayer.SplitterDistance = maxWithSightBar;
             this.SizeChanged += Homefrm_SizeChanged;
             lbUserName.Text = "Hi, " + AuthDAO.Instance.User.TenNguoiDung;
-            
+
             ///load
-            
+            LoadLichTrinh(LichTrinhDAO.Instance.getAll());
             ///
+        }
+
+        private void LoadLichTrinh(DataTable lishLichTrinh)
+        {
+            dgvLichTrinh.DataSource = lishLichTrinh;
+            dgvLichTrinh.Refresh();
         }
 
         private void btnHidenBar_Click(object sender, EventArgs e)
@@ -105,6 +112,59 @@ namespace QLThueXeOto
             {
                 frm.Show();
             }
+        }
+
+        private void dgvLichTrinh_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Lấy thông tin từ cột cụ thể trong dòng được click
+                int lichTrinhId = (int)dgvLichTrinh.Rows[e.RowIndex].Cells["ID lịch trình"].Value;
+                LichTrinh lichTrinhSelected = LichTrinhDAO.Instance.getLichTrinhById(lichTrinhId);
+                if(lichTrinhSelected.TrangThai == null || lichTrinhSelected.TrangThai == "Đã thanh toán")
+                {
+                    MessageBox.Show("Lịch trình này đã được thanh toán");
+                    return;
+                }
+                if(lichTrinhSelected != null)
+                {
+                    ThanhToanfrm frm = new ThanhToanfrm(lichTrinhSelected);
+                    frm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Bạn chưa chọn lịch trình nào");
+                }
+                LoadLichTrinh(LichTrinhDAO.Instance.getAll());
+            }
+        }
+
+        private void btnChoThue_Click(object sender, EventArgs e)
+        {
+            HopDongThueXefrm frm = new HopDongThueXefrm();
+            this.Close();
+            frm.Show();
+        }
+
+        private void btnQLOto_Click(object sender, EventArgs e)
+        {
+            QuanLyOtofrm frm = new QuanLyOtofrm();
+            this.Close();
+            frm.Show();
+        }
+
+        private void btnQLDonDatXe_Click(object sender, EventArgs e)
+        {
+            QuanLyDonDatXefrm frm = new QuanLyDonDatXefrm();
+            this.Close();
+            frm.Show();
+        }
+
+        private void btnQLKhachHang_Click(object sender, EventArgs e)
+        {
+            QuanLyKhachHangfrm frm = new QuanLyKhachHangfrm();
+            this.Close();
+            frm.Show();
         }
     }
 }
