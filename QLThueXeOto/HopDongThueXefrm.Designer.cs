@@ -118,7 +118,7 @@
             this.scLayer.Panel2.Controls.Add(this.body);
             this.scLayer.Panel2.Controls.Add(this.header);
             this.scLayer.Size = new System.Drawing.Size(1365, 745);
-            this.scLayer.SplitterDistance = 213;
+            this.scLayer.SplitterDistance = 300;
             this.scLayer.TabIndex = 1;
             // 
             // btnQLKhachHang
@@ -142,7 +142,7 @@
             this.btnQLKhachHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQLKhachHang.Name = "btnQLKhachHang";
             this.btnQLKhachHang.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnQLKhachHang.Size = new System.Drawing.Size(207, 64);
+            this.btnQLKhachHang.Size = new System.Drawing.Size(294, 64);
             this.btnQLKhachHang.TabIndex = 8;
             this.btnQLKhachHang.Text = "QUẢN LÝ KHÁCH HÀNG";
             this.btnQLKhachHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -169,7 +169,7 @@
             this.btnQLLichTrinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQLLichTrinh.Name = "btnQLLichTrinh";
             this.btnQLLichTrinh.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnQLLichTrinh.Size = new System.Drawing.Size(207, 64);
+            this.btnQLLichTrinh.Size = new System.Drawing.Size(294, 64);
             this.btnQLLichTrinh.TabIndex = 7;
             this.btnQLLichTrinh.Text = "QUẢN LÝ LỊCH TRÌNH";
             this.btnQLLichTrinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -183,7 +183,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 439);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(211, 210);
+            this.guna2Panel1.Size = new System.Drawing.Size(298, 210);
             this.guna2Panel1.TabIndex = 6;
             // 
             // scItemThongKe
@@ -204,7 +204,7 @@
             this.scItemThongKe.Panel2.Controls.Add(this.guna2Button5);
             this.scItemThongKe.Panel2.Controls.Add(this.guna2Button4);
             this.scItemThongKe.Panel2MinSize = 0;
-            this.scItemThongKe.Size = new System.Drawing.Size(207, 206);
+            this.scItemThongKe.Size = new System.Drawing.Size(294, 206);
             this.scItemThongKe.SplitterDistance = 61;
             this.scItemThongKe.SplitterWidth = 7;
             this.scItemThongKe.TabIndex = 8;
@@ -232,7 +232,7 @@
             this.btnThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.PressedColor = System.Drawing.Color.Transparent;
-            this.btnThongKe.Size = new System.Drawing.Size(225, 63);
+            this.btnThongKe.Size = new System.Drawing.Size(312, 63);
             this.btnThongKe.TabIndex = 5;
             this.btnThongKe.Text = "THỐNG KÊ             VV";
             this.btnThongKe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -259,10 +259,11 @@
             this.guna2Button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.guna2Button5.Size = new System.Drawing.Size(220, 64);
+            this.guna2Button5.Size = new System.Drawing.Size(307, 64);
             this.guna2Button5.TabIndex = 7;
-            this.guna2Button5.Text = "KHÁCH HÀNG";
+            this.guna2Button5.Text = "BÁO CÁO";
             this.guna2Button5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // guna2Button4
             // 
@@ -285,10 +286,11 @@
             this.guna2Button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.guna2Button4.Size = new System.Drawing.Size(223, 64);
+            this.guna2Button4.Size = new System.Drawing.Size(310, 64);
             this.guna2Button4.TabIndex = 6;
             this.guna2Button4.Text = "DOANH THU";
             this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // btnQLDonDatXe
             // 
@@ -311,7 +313,7 @@
             this.btnQLDonDatXe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQLDonDatXe.Name = "btnQLDonDatXe";
             this.btnQLDonDatXe.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnQLDonDatXe.Size = new System.Drawing.Size(207, 64);
+            this.btnQLDonDatXe.Size = new System.Drawing.Size(294, 64);
             this.btnQLDonDatXe.TabIndex = 4;
             this.btnQLDonDatXe.Text = "QUẢN LÝ ĐƠN ĐẶT XE";
             this.btnQLDonDatXe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -338,7 +340,7 @@
             this.btnQLOto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQLOto.Name = "btnQLOto";
             this.btnQLOto.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnQLOto.Size = new System.Drawing.Size(207, 64);
+            this.btnQLOto.Size = new System.Drawing.Size(294, 64);
             this.btnQLOto.TabIndex = 3;
             this.btnQLOto.Text = "QUẢN LÝ OTO";
             this.btnQLOto.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -353,7 +355,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(213, 62);
+            this.panel1.Size = new System.Drawing.Size(300, 62);
             this.panel1.TabIndex = 2;
             // 
             // lbTitle
@@ -385,7 +387,7 @@
             this.btnHidenBar.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHidenBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(108)))), ((int)(((byte)(154)))));
             this.btnHidenBar.HoverState.ForeColor = System.Drawing.Color.Blue;
-            this.btnHidenBar.Location = new System.Drawing.Point(124, 2);
+            this.btnHidenBar.Location = new System.Drawing.Point(211, 2);
             this.btnHidenBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHidenBar.Name = "btnHidenBar";
             this.btnHidenBar.Size = new System.Drawing.Size(85, 57);
@@ -414,7 +416,7 @@
             this.btnChoThue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnChoThue.Name = "btnChoThue";
             this.btnChoThue.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnChoThue.Size = new System.Drawing.Size(207, 64);
+            this.btnChoThue.Size = new System.Drawing.Size(294, 64);
             this.btnChoThue.TabIndex = 1;
             this.btnChoThue.Text = "HỢP ĐỒNG CHO THUÊ";
             this.btnChoThue.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -428,7 +430,7 @@
             this.body.Location = new System.Drawing.Point(0, 62);
             this.body.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.body.Name = "body";
-            this.body.Size = new System.Drawing.Size(1148, 683);
+            this.body.Size = new System.Drawing.Size(1061, 683);
             this.body.TabIndex = 1;
             // 
             // guna2GradientPanel1
@@ -444,7 +446,7 @@
             this.guna2GradientPanel1.Location = new System.Drawing.Point(35, 150);
             this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1077, 501);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(990, 501);
             this.guna2GradientPanel1.TabIndex = 4;
             // 
             // panel4
@@ -456,7 +458,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 327);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1077, 174);
+            this.panel4.Size = new System.Drawing.Size(990, 174);
             this.panel4.TabIndex = 2;
             // 
             // panel6
@@ -473,7 +475,7 @@
             this.panel6.Location = new System.Drawing.Point(0, 86);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1077, 88);
+            this.panel6.Size = new System.Drawing.Size(990, 88);
             this.panel6.TabIndex = 3;
             // 
             // rbMPV
@@ -676,7 +678,7 @@
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1077, 86);
+            this.panel5.Size = new System.Drawing.Size(990, 86);
             this.panel5.TabIndex = 2;
             // 
             // rb2Cho
@@ -827,7 +829,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 63);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1077, 258);
+            this.panel3.Size = new System.Drawing.Size(990, 258);
             this.panel3.TabIndex = 1;
             // 
             // flTable
@@ -837,7 +839,7 @@
             this.flTable.Location = new System.Drawing.Point(0, 0);
             this.flTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flTable.Name = "flTable";
-            this.flTable.Size = new System.Drawing.Size(1077, 258);
+            this.flTable.Size = new System.Drawing.Size(990, 258);
             this.flTable.TabIndex = 3;
             // 
             // panel2
@@ -848,7 +850,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1077, 60);
+            this.panel2.Size = new System.Drawing.Size(990, 60);
             this.panel2.TabIndex = 0;
             // 
             // lbLoaiXe
@@ -872,7 +874,7 @@
             this.pnContentHead.Location = new System.Drawing.Point(35, 36);
             this.pnContentHead.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnContentHead.Name = "pnContentHead";
-            this.pnContentHead.Size = new System.Drawing.Size(1077, 81);
+            this.pnContentHead.Size = new System.Drawing.Size(990, 81);
             this.pnContentHead.TabIndex = 3;
             // 
             // label1
@@ -885,7 +887,7 @@
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Location = new System.Drawing.Point(5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1071, 81);
+            this.label1.Size = new System.Drawing.Size(984, 81);
             this.label1.TabIndex = 0;
             this.label1.Text = "HỢP ĐỒNG CHO THUÊ XE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -898,7 +900,7 @@
             this.header.Location = new System.Drawing.Point(0, 0);
             this.header.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(1148, 62);
+            this.header.Size = new System.Drawing.Size(1061, 62);
             this.header.TabIndex = 0;
             // 
             // menuTripUserInfo
@@ -909,10 +911,10 @@
             this.menuTripUserInfo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lbUserName,
             this.aToolStripMenuItem});
-            this.menuTripUserInfo.Location = new System.Drawing.Point(992, 16);
+            this.menuTripUserInfo.Location = new System.Drawing.Point(755, 16);
             this.menuTripUserInfo.Name = "menuTripUserInfo";
             this.menuTripUserInfo.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuTripUserInfo.Size = new System.Drawing.Size(146, 28);
+            this.menuTripUserInfo.Size = new System.Drawing.Size(296, 28);
             this.menuTripUserInfo.TabIndex = 0;
             this.menuTripUserInfo.Text = "menuStrip1";
             // 
@@ -928,8 +930,9 @@
             // btnLogOut
             // 
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(165, 26);
+            this.btnLogOut.Size = new System.Drawing.Size(224, 26);
             this.btnLogOut.Text = "Đăng xuất";
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // aToolStripMenuItem
             // 

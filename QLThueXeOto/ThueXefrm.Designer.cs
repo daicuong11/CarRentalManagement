@@ -262,8 +262,9 @@
             this.guna2Button5.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.guna2Button5.Size = new System.Drawing.Size(294, 64);
             this.guna2Button5.TabIndex = 7;
-            this.guna2Button5.Text = "KHÁCH HÀNG";
+            this.guna2Button5.Text = "BÁO CÁO";
             this.guna2Button5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // guna2Button4
             // 
@@ -289,6 +290,7 @@
             this.guna2Button4.TabIndex = 6;
             this.guna2Button4.Text = "DOANH THU";
             this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // btnQLDonDatXe
             // 
@@ -1038,10 +1040,10 @@
             this.menuTripUserInfo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lbUserName,
             this.aToolStripMenuItem});
-            this.menuTripUserInfo.Location = new System.Drawing.Point(912, 16);
+            this.menuTripUserInfo.Location = new System.Drawing.Point(762, 16);
             this.menuTripUserInfo.Name = "menuTripUserInfo";
             this.menuTripUserInfo.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuTripUserInfo.Size = new System.Drawing.Size(146, 28);
+            this.menuTripUserInfo.Size = new System.Drawing.Size(296, 28);
             this.menuTripUserInfo.TabIndex = 0;
             this.menuTripUserInfo.Text = "menuStrip1";
             // 
@@ -1057,8 +1059,9 @@
             // btnLogOut
             // 
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(165, 26);
+            this.btnLogOut.Size = new System.Drawing.Size(224, 26);
             this.btnLogOut.Text = "Đăng xuất";
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // aToolStripMenuItem
             // 

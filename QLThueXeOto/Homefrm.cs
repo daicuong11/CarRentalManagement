@@ -1,4 +1,5 @@
 ﻿using QLThueXeOto.DAO;
+using QLThueXeOto.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace QLThueXeOto
 {
     public partial class Homefrm : Form
     {
+        private NguoiDung user = AuthDAO.Instance.User;
         private int minWithSightBar = 54;
         private int maxWithSightBar = 300;
         private int heightItem = 64;
@@ -61,46 +63,69 @@ namespace QLThueXeOto
         {
             scLayer.SplitterDistance = maxWithSightBar;
             this.SizeChanged += Homefrm_SizeChanged;
+            PhanQuyen();
+        }
+
+        public void PhanQuyen()
+        {
             lbUserName.Text = "Hi, " + AuthDAO.Instance.User.TenNguoiDung;
+
         }
 
         private void Homefrm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            // Kiểm tra nguyên nhân đóng form
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Ngăn chặn đóng form
+                e.Cancel = true;
+
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn thoát", "Xác nhận", MessageBoxButtons.OKCancel);
+
+                // Kiểm tra xem người dùng đã nhấn nút OK hay Cancel
+                if (result == DialogResult.OK)
+                {
+                    Application.Exit();
+                }
+                else if (result == DialogResult.Cancel)
+                {
+
+                }
+            }
         }
 
         private void btnChoThue_Click_1(object sender, EventArgs e)
         {
             HopDongThueXefrm frm = new HopDongThueXefrm();
-            this.Hide();
+            //this.Hide();
             frm.Show();
         }
 
         private void btnQLOto_Click_1(object sender, EventArgs e)
         {
             QuanLyOtofrm frm = new QuanLyOtofrm();
-            this.Hide();
+            //this.Hide();
             frm.Show();
         }
 
         private void btnQLDonDatXe_Click_1(object sender, EventArgs e)
         {
             QuanLyDonDatXefrm frm = new QuanLyDonDatXefrm();
-            this.Hide();
+            //this.Hide();
             frm.Show();
         }
 
         private void btnQLLichTrinh_Click_1(object sender, EventArgs e)
         {
             QuanLyLichTrinhfrm frm = new QuanLyLichTrinhfrm();
-            this.Hide();
+            //this.Hide();
             frm.Show();
         }
 
         private void btnQLKhachHang_Click_1(object sender, EventArgs e)
         {
             QuanLyKhachHangfrm frm = new QuanLyKhachHangfrm();
-            this.Hide();
+            //this.Hide();
             frm.Show();
         }
 
@@ -133,5 +158,38 @@ namespace QLThueXeOto
             }
         }
 
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            if (user.QuyenId != 1)
+            {
+                MessageBox.Show("Bạn không có quyền vào chức năng này", "Thông báo");
+                return;
+            }
+            ThongKeDoanhThu frm = new ThongKeDoanhThu();
+            //this.Hide();
+            frm.Show();
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            if (user.QuyenId != 1)
+            {
+                MessageBox.Show("Bạn không có quyền vào chức năng này", "Thông báo");
+                return;
+            }
+            ThongKeDoanhThu2 frm = new ThongKeDoanhThu2();
+            //this.Hide();
+            frm.Show();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            DangNhapfrm frm = (DangNhapfrm)Application.OpenForms["dangnhapfrm"];
+            if (frm != null)
+            {
+                frm.Show();
+            }
+            this.Hide();
+        }
     }
 }

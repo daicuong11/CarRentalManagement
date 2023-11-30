@@ -39,7 +39,7 @@ namespace QLThueXeOto
                 {
                     Homefrm frm = new Homefrm();
                     this.Hide();
-                    frm.Show();
+                    frm.ShowDialog();
                 }
                 else
                 {

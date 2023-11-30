@@ -44,17 +44,17 @@
             this.btnHidenBar = new Guna.UI2.WinForms.Guna2Button();
             this.btnChoThue = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.header = new Guna.UI2.WinForms.Guna2Panel();
             this.menuTripUserInfo = new System.Windows.Forms.MenuStrip();
             this.lbUserName = new System.Windows.Forms.ToolStripMenuItem();
             this.btnLogOut = new System.Windows.Forms.ToolStripMenuItem();
             this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.scLayer)).BeginInit();
             this.scLayer.Panel1.SuspendLayout();
             this.scLayer.Panel2.SuspendLayout();
@@ -66,11 +66,11 @@
             this.scItemThongKe.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
+            this.guna2GradientPanel1.SuspendLayout();
             this.header.SuspendLayout();
             this.menuTripUserInfo.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.guna2GradientPanel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripTextBox1
@@ -104,7 +104,7 @@
             this.scLayer.Panel2.Controls.Add(this.panel2);
             this.scLayer.Panel2.Controls.Add(this.header);
             this.scLayer.Size = new System.Drawing.Size(1365, 745);
-            this.scLayer.SplitterDistance = 300;
+            this.scLayer.SplitterDistance = 303;
             this.scLayer.TabIndex = 4;
             // 
             // btnQLKhachHang
@@ -128,7 +128,7 @@
             this.btnQLKhachHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQLKhachHang.Name = "btnQLKhachHang";
             this.btnQLKhachHang.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnQLKhachHang.Size = new System.Drawing.Size(294, 64);
+            this.btnQLKhachHang.Size = new System.Drawing.Size(297, 64);
             this.btnQLKhachHang.TabIndex = 8;
             this.btnQLKhachHang.Text = "QUẢN LÝ KHÁCH HÀNG";
             this.btnQLKhachHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -155,7 +155,7 @@
             this.btnQLLichTrinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQLLichTrinh.Name = "btnQLLichTrinh";
             this.btnQLLichTrinh.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnQLLichTrinh.Size = new System.Drawing.Size(294, 64);
+            this.btnQLLichTrinh.Size = new System.Drawing.Size(297, 64);
             this.btnQLLichTrinh.TabIndex = 7;
             this.btnQLLichTrinh.Text = "QUẢN LÝ LỊCH TRÌNH";
             this.btnQLLichTrinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -169,7 +169,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 439);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(298, 210);
+            this.guna2Panel1.Size = new System.Drawing.Size(301, 210);
             this.guna2Panel1.TabIndex = 6;
             // 
             // scItemThongKe
@@ -246,8 +246,9 @@
             this.guna2Button5.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.guna2Button5.Size = new System.Drawing.Size(300, 64);
             this.guna2Button5.TabIndex = 7;
-            this.guna2Button5.Text = "KHÁCH HÀNG";
+            this.guna2Button5.Text = "BÁO CÁO";
             this.guna2Button5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // guna2Button4
             // 
@@ -274,6 +275,7 @@
             this.guna2Button4.TabIndex = 6;
             this.guna2Button4.Text = "DOANH THU";
             this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // btnQLDonDatXe
             // 
@@ -296,7 +298,7 @@
             this.btnQLDonDatXe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQLDonDatXe.Name = "btnQLDonDatXe";
             this.btnQLDonDatXe.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnQLDonDatXe.Size = new System.Drawing.Size(294, 64);
+            this.btnQLDonDatXe.Size = new System.Drawing.Size(297, 64);
             this.btnQLDonDatXe.TabIndex = 4;
             this.btnQLDonDatXe.Text = "QUẢN LÝ ĐƠN ĐẶT XE";
             this.btnQLDonDatXe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -323,7 +325,7 @@
             this.btnQLOto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQLOto.Name = "btnQLOto";
             this.btnQLOto.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnQLOto.Size = new System.Drawing.Size(294, 64);
+            this.btnQLOto.Size = new System.Drawing.Size(297, 64);
             this.btnQLOto.TabIndex = 3;
             this.btnQLOto.Text = "QUẢN LÝ OTO";
             this.btnQLOto.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -338,7 +340,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 62);
+            this.panel1.Size = new System.Drawing.Size(303, 62);
             this.panel1.TabIndex = 2;
             // 
             // lbTitle
@@ -399,7 +401,7 @@
             this.btnChoThue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnChoThue.Name = "btnChoThue";
             this.btnChoThue.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnChoThue.Size = new System.Drawing.Size(294, 64);
+            this.btnChoThue.Size = new System.Drawing.Size(297, 64);
             this.btnChoThue.TabIndex = 1;
             this.btnChoThue.Text = "HỢP ĐỒNG CHO THUÊ";
             this.btnChoThue.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -411,56 +413,8 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 62);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1061, 683);
+            this.panel2.Size = new System.Drawing.Size(1058, 683);
             this.panel2.TabIndex = 1;
-            // 
-            // header
-            // 
-            this.header.BackColor = System.Drawing.Color.White;
-            this.header.Controls.Add(this.menuTripUserInfo);
-            this.header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.header.Location = new System.Drawing.Point(0, 0);
-            this.header.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(1061, 62);
-            this.header.TabIndex = 0;
-            // 
-            // menuTripUserInfo
-            // 
-            this.menuTripUserInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.menuTripUserInfo.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuTripUserInfo.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuTripUserInfo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lbUserName,
-            this.aToolStripMenuItem});
-            this.menuTripUserInfo.Location = new System.Drawing.Point(905, 16);
-            this.menuTripUserInfo.Name = "menuTripUserInfo";
-            this.menuTripUserInfo.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuTripUserInfo.Size = new System.Drawing.Size(146, 30);
-            this.menuTripUserInfo.TabIndex = 0;
-            this.menuTripUserInfo.Text = "menuStrip1";
-            // 
-            // lbUserName
-            // 
-            this.lbUserName.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnLogOut});
-            this.lbUserName.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUserName.Name = "lbUserName";
-            this.lbUserName.Size = new System.Drawing.Size(105, 24);
-            this.lbUserName.Text = "Đại Cương";
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(165, 26);
-            this.btnLogOut.Text = "Đăng xuất";
-            // 
-            // aToolStripMenuItem
-            // 
-            this.aToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.aToolStripMenuItem.Image = global::QLThueXeOto.Properties.Resources.user;
-            this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(34, 24);
             // 
             // panel3
             // 
@@ -473,6 +427,47 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(951, 579);
             this.panel3.TabIndex = 0;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BorderColor = System.Drawing.Color.Cyan;
+            this.guna2Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.guna2Panel2.BorderThickness = 2;
+            this.guna2Panel2.Controls.Add(this.label3);
+            this.guna2Panel2.Controls.Add(this.label2);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 75);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(951, 504);
+            this.guna2Panel2.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(0, 75);
+            this.label3.Name = "label3";
+            this.label3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label3.Size = new System.Drawing.Size(951, 75);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Version mới nhất: 1.0";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label2.Size = new System.Drawing.Size(951, 75);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "TẬP ĐOÀN CHO THUÊ XE";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // guna2GradientPanel1
             // 
@@ -498,46 +493,54 @@
             this.label1.Text = "BẢNG THÔNG TIN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2Panel2
+            // header
             // 
-            this.guna2Panel2.BorderColor = System.Drawing.Color.Cyan;
-            this.guna2Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.guna2Panel2.BorderThickness = 2;
-            this.guna2Panel2.Controls.Add(this.label3);
-            this.guna2Panel2.Controls.Add(this.label2);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 75);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(951, 504);
-            this.guna2Panel2.TabIndex = 1;
+            this.header.BackColor = System.Drawing.Color.White;
+            this.header.Controls.Add(this.menuTripUserInfo);
+            this.header.Dock = System.Windows.Forms.DockStyle.Top;
+            this.header.Location = new System.Drawing.Point(0, 0);
+            this.header.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.header.Name = "header";
+            this.header.Size = new System.Drawing.Size(1058, 62);
+            this.header.TabIndex = 0;
             // 
-            // label2
+            // menuTripUserInfo
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label2.Size = new System.Drawing.Size(951, 75);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "TẬP ĐOÀN CHO THUÊ XE";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menuTripUserInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.menuTripUserInfo.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuTripUserInfo.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuTripUserInfo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lbUserName,
+            this.aToolStripMenuItem});
+            this.menuTripUserInfo.Location = new System.Drawing.Point(755, 16);
+            this.menuTripUserInfo.Name = "menuTripUserInfo";
+            this.menuTripUserInfo.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuTripUserInfo.Size = new System.Drawing.Size(296, 28);
+            this.menuTripUserInfo.TabIndex = 0;
+            this.menuTripUserInfo.Text = "menuStrip1";
             // 
-            // label3
+            // lbUserName
             // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(0, 75);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label3.Size = new System.Drawing.Size(951, 75);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Version mới nhất: 1.0";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbUserName.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnLogOut});
+            this.lbUserName.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUserName.Name = "lbUserName";
+            this.lbUserName.Size = new System.Drawing.Size(105, 24);
+            this.lbUserName.Text = "Đại Cương";
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(165, 26);
+            this.btnLogOut.Text = "Đăng xuất";
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // aToolStripMenuItem
+            // 
+            this.aToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.aToolStripMenuItem.Image = global::QLThueXeOto.Properties.Resources.user;
+            this.aToolStripMenuItem.Name = "aToolStripMenuItem";
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(34, 24);
             // 
             // Homefrm
             // 
@@ -564,13 +567,13 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2GradientPanel1.ResumeLayout(false);
             this.header.ResumeLayout(false);
             this.header.PerformLayout();
             this.menuTripUserInfo.ResumeLayout(false);
             this.menuTripUserInfo.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.guna2GradientPanel1.ResumeLayout(false);
-            this.guna2Panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

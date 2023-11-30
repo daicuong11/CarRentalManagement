@@ -20,6 +20,7 @@ namespace QLThueXeOto
 {
     public partial class QuanLyKhachHangfrm : Form
     {
+        private NguoiDung user = AuthDAO.Instance.User;
         private int minWithSightBar = 54;
         private int maxWithSightBar = 300;
         private int heightItem = 64;
@@ -317,6 +318,36 @@ namespace QLThueXeOto
                     MessageBox.Show("File Excel đã được xuất thành công!");
                 }
             }
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            if (user.QuyenId != 1)
+            {
+                MessageBox.Show("Bạn không có quyền vào chức năng này", "Thông báo");
+                return;
+            }
+            ThongKeDoanhThu frm = new ThongKeDoanhThu();
+            this.Hide();
+            frm.Show();
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            if (user.QuyenId != 1)
+            {
+                MessageBox.Show("Bạn không có quyền vào chức năng này", "Thông báo");
+                return;
+            }
+            ThongKeDoanhThu frm = new ThongKeDoanhThu();
+            this.Hide();
+            frm.Show();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
     }
 }

@@ -36,5 +36,10 @@ namespace QLThueXeOto.DTO
         public string Password { get => password; set => password = value; }
         public string DiaChi { get => diaChi; set => diaChi = value; }
         public int QuyenId { get => quyenId; set => quyenId = value; }
+
+        public override string ToString()
+        {
+            return this.nguoiDungId + ", " + this.tenNguoiDung + ", " + quyenId;
+        }
     }
 }
